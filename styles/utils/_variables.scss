@@ -1,0 +1,64 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+// Fonts
+$font-helveticaneue: 'HelveticaNeue';
+$font-helveticaneue-bold: 'HelveticaNeue-Bold';
+$font-helveticaneue-light: 'HelveticaNeue-Light';
+$font-helvetica-black: 'HelveticaNeue-Black';
+$font-helvetica-black-hollow: 'HelveticaNeue-Black-Hollow';
+
+$font-brothers-bold: 'Brothers Bold';
+$font-brothers-regular: 'Brothers Regular';
+$font-circular-std-black: 'Circular STD Black';
+$font-circular-std-black-italic: 'Circular STD Black Italic';
+$font-circular-std-bold: 'Circular STD Bold';
+$font-circular-std-bold-italic: 'Circular STD Bold Italic';
+$font-circular-std-book: 'Circular STD Book';
+$font-circular-std-book-italic: 'Circular STD Book Italic';
+$font-circular-std-medium: 'Circular STD Medium';
+$font-circular-std-medium-italic: 'Circular STD Medium Italic';
+$font-gotham-bold: 'Gotham Bold';
+$font-gotham-bold-italic: 'Gotham Bold Italic';
+$font-gotham-book: 'Gotham Book';
+$font-gotham-book-italic: 'Gotham Book Italic';
+$font-gotham-medium: 'Gotham Medium';
+$font-libre-baskerville-bold: 'Libre Baskerville Bold';
+$font-libre-baskerville-italic: 'Libre Baskerville Italic';
+$font-libre-baskerville-regular: 'Libre Baskerville Regular';
+
+/// @type List
+$text-font-stack: $font-gotham-book, 'Gotham Book', 'Gotham Bold', 'Arial', sans-serif !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+/// Copy text color
+/// @type Color
+$text-color: #222 !default;
+
+/// Main brand color
+/// @type Color
+$brand-color: #4868db !default;
+
+/// Light grey
+/// @type Color
+$light-grey: #EDEDED !default;
+
+/// Medium grey
+/// @type Color
+$mid-grey: #999 !default;
+
+/// Dark grey
+/// @type Color
+$dark-grey: #444 !default;
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '../assets/' !default;

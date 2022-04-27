@@ -1,0 +1,30 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+
+@include font-face($font-helveticaneue, $base-url + 'fonts/', 'helveticaneue', 'helveticaneue');
+@include font-face($font-helveticaneue-bold, $base-url + 'fonts/', 'helveticaneue-bold', 'helveticaneue-bold');
+@include font-face($font-helveticaneue-light, $base-url + 'fonts/', 'helveticaneue-light', 'helveticaneue-light');
+@include font-face($font-helvetica-black, $base-url + 'fonts/', 'helvetica-black', 'helvetica-black');
+@include font-face($font-helvetica-black-hollow, $base-url + 'fonts/', 'helvetica-black-hollow', 'helvetica-black-hollow');
+
+@include font-face($font-brothers-bold, $base-url + 'fonts/', 'brothers-bold', 'brothers-bold');
+@include font-face($font-brothers-regular, $base-url + 'fonts/', 'brothers-regular', 'brothers-regular');
+@include font-face($font-circular-std-black, $base-url + 'fonts/', 'circular-std-black', 'circular-std-black');
+@include font-face($font-circular-std-black-italic, $base-url + 'fonts/', 'circular-std-black-italic', 'circular-std-black-italic');
+@include font-face($font-circular-std-bold, $base-url + 'fonts/', 'circular-std-bold', 'circular-std-bold');
+@include font-face($font-circular-std-bold-italic, $base-url + 'fonts/', 'circular-std-bold-italic', 'circular-std-bold-italic');
+@include font-face($font-circular-std-book, $base-url + 'fonts/', 'circular-std-book', 'circular-std-book');
+@include font-face($font-circular-std-book-italic, $base-url + 'fonts/', 'circular-std-book-italic', 'circular-std-book-italic');
+@include font-face($font-circular-std-medium, $base-url + 'fonts/', 'circular-std-medium', 'circular-std-medium');
+@include font-face($font-circular-std-medium-italic, $base-url + 'fonts/', 'circular-std-medium-italic', 'circular-std-medium-italic');
+@include font-face($font-gotham-bold, $base-url + 'fonts/', 'gotham-bold', 'gotham-bold');
+@include font-face($font-gotham-bold-italic, $base-url + 'fonts/', 'gotham-bold-italic', 'gotham-bold-italic');
+@include font-face($font-gotham-book, $base-url + 'fonts/', 'gotham-book', 'gotham-book');
+@include font-face($font-gotham-book-italic, $base-url + 'fonts/', 'gotham-book-italic', 'gotham-book-italic');
+@include font-face($font-gotham-medium, $base-url + 'fonts/', 'gotham-medium', 'gotham-medium');
+@include font-face($font-libre-baskerville-bold, $base-url + 'fonts/', 'libre-baskerville-bold', 'libre-baskerville-bold');
+@include font-face($font-libre-baskerville-italic, $base-url + 'fonts/', 'libre-baskerville-italic', 'libre-baskerville-italic');
+@include font-face($font-libre-baskerville-regular, $base-url + 'fonts/', 'libre-baskerville-regular', 'libre-baskerville-regular');
