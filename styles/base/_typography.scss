@@ -7,3 +7,19 @@ body {
   color: $text-color;
   font: normal 125% / 1.4 $text-font-stack;
 }
+
+.heading {
+  position: relative;
+  width: fit-content;
+
+  &.dashed:after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    z-index: 2;
+    width: 100%;
+    border-bottom: 2px dashed #ccc;
+    transform: translateX(-50%);
+  }
+}
