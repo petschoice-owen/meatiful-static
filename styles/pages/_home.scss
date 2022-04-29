@@ -58,44 +58,16 @@
       width: 100%;
       max-width: 600px;
       color: #fff;
-
-      .heading {
-        margin: 0 0 32px;
-        padding: 0;
-        font-family: $font-gotham-bold;
-        font-weight: 700;
-        line-height: 1;
-        font-size: 45px;
-        text-transform: uppercase;
-        text-shadow: 0 2px 4px #000;
-      }
-
-      .subheading {
-        margin: 0 0 32px;
-        font-family: $font-libre-baskerville-italic;
-        font-weight: normal;
-        font-size: 28px;
-        text-shadow: 0 2px 4px #000;
-      }
-
-      p {
-        font-size: 15px;
-      }
     }
 
     .button-holder {
       margin-top: 22px;
-
-      .btn-brown {
-        padding: 22px 30px;
-        width: fit-content;
-      }
     }
   }
 
   .featured {
     position: relative;
-    padding: 180px 0 150px;
+    padding: 180px 0 140px;
     color: #fff;
     background: url(../assets/images/bg-home-featured.jpg) repeat-y;
     background-size: cover;
@@ -108,7 +80,9 @@
       z-index: 2;
       display: flex;
       justify-content: center;
+      opacity: 1;
       transform: translate(-50%, -50%);
+      transition: .35s all ease-in-out;
 
       .button-wrapper {
         position: relative;
@@ -138,25 +112,12 @@
           right: -10px;
         }
       }
-
-      .btn-brown {
-        padding: 22px 30px;
-        width: fit-content;
-      }
-    }
-
-    h2 {
-      font-family: $font-gotham-bold;
-      font-style: normal;
-      font-size: 45px;
-      font-weight: 700;
-      text-transform: uppercase;
     }
 
     .items {
       display: flex;
       justify-content: space-around;
-      margin-bottom: 50px;
+      margin: 30px 0 50px;
 
       img {
         max-width: 100%;
@@ -167,6 +128,12 @@
       img {
         width: 100%;
       }
+    }
+
+    .button-holder {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
     }
   }
 
@@ -191,27 +158,116 @@
 
   .product-range {
     position: relative;
+    padding-bottom: 80px;
     color: #fff;
     background-color: #000;
-
-    .heading {
-      margin: auto;
-      font-family: $font-gotham-bold;
-      font-style: normal;
-      font-size: 45px;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
 
     .items {
       display: flex;
       justify-content: center;
+      margin: auto;
+      width: 1030px;
+    }
+
+    .btn-brown {
+      margin: 0 15px;
+      width: 33.33%;
+    }
+  }
+
+  .news {
+    position: relative;
+    padding: 80px 0;
+    background-position: top left;
+
+    .heading {
+      margin-bottom: 40px;
+      color: #272727;
+      text-shadow: none;
+    }
+
+    .column {
+      padding: 0 15px;
+    }
+
+    .item {
+      height: 100%;
+    }
+
+    .item-link {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      box-shadow: 0 2px 10px 1px rgba(0,0,0,.1);
+      transition: .35s all ease-in-out;
+
+      @include on-event {
+        text-decoration: none;
+      }
+
+      &:hover {
+        box-shadow: 0 5px 15px 5px rgba(0,0,0,.3);
+      }
+    }
+
+    .image-holder {
+      img {
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        max-width: 100%;
+        height: 270px;
+      }
+    }
+
+    .content-holder {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 30px;
+      height: 100%;
+      color: #000;
+      background-color: #fff;
+
+      .title {
+        margin: 0 0 30px;
+        color: #000;
+        font-family: $font-gotham-medium;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 25px;
+        text-transform: uppercase;
+      }
+
+      .button-holder {
+        margin-top: auto;
+      }
+
+      .btn-brown {
+        width: 100%;
+      }
+    }
+
+    .button-holder {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
     }
   }
 
   @media (max-width: 1439px) {
     .hero {
       padding: 160px 0 125px;
+    }
+
+    .featured {
+      padding: 140px 0 100px;
+    }
+
+    .product-range {
+      .items {
+        width: 850px;
+      }
     }
   }
 
@@ -222,16 +278,22 @@
 
       .wrapper {
         max-width: 50%;
-
-        .heading {
-          font-size: 34px;
-        }
-  
-        .subheading {
-          font-size: 22px;
-        }
       }
-    }    
+    }
+
+    .featured {
+      padding: 120px 0 90px;
+    }
+
+    .news {
+      .image-holder img {
+        height: 170px;
+      }
+
+      .content-holder .title {
+        font-size: 22px;
+      }
+    }
   }
 
   @media (max-width: 991px) {
@@ -239,26 +301,60 @@
       top: 67px;
       padding: 80px 0 70px;
 
-      .button-holder .btn-brown {
-        padding: 16px 26px;
-      }
-
       .wrapper {
         max-width: 50%;
+      }
+    }
 
-        .heading {
-          font-size: 28px;
-        }
-  
-        .subheading {
-          font-size: 18px;
-        }
+    .featured {
+      padding: 80px 0;
 
-        p {
-          font-size: 14px;
+      .button-top {
+        pointer-events: none;
+        opacity: 0;
+      }
+    }
+
+    .product-range {
+      .container {
+        max-width: 100%;
+      }
+
+      .items {
+        width: 100%;
+      }
+
+      .btn-brown {
+        margin: 0 10px;
+      }
+    }
+
+    .news {
+      .container {
+        max-width: 100%;
+      }
+
+      .row {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .heading {
+        margin-bottom: 30px;
+      }
+
+      .column {
+        padding: 0 10px;
+      }
+
+      .content-holder {
+        padding: 22px 20px;
+
+        .title {
+          font-size: 20px;
         }
       }
-    }    
+    }
   }
 
   @media (max-width: 767px) {
@@ -285,6 +381,46 @@
         .heading {
           max-width: 340px;
         }
+      }
+    }
+
+    .featured {
+      padding: 70px 0;
+
+      .items {
+        margin: 20px 0 30px;
+      }
+    }
+
+    .product-range {
+      .heading {
+        text-align: center;
+      }
+      
+      .items {
+        flex-direction: column;
+        width: fit-content;
+        min-width: 200px;
+      }
+
+      .btn-brown {
+        margin: 0;
+        width: 100%;
+
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .news {
+      .column:not(:last-child) {
+        margin-bottom: 30px;
+      }
+
+      .item {
+        margin: auto;
+        max-width: 400px;
       }
     }
   }

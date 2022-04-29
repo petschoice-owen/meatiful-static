@@ -203,6 +203,8 @@
 
     .btn-brown {
       margin-bottom: 5px;
+      padding: 14px;
+      width: 100%;
     }
 
     .dashed {
@@ -405,6 +407,10 @@
         padding: 15px 15px 0;
       }
 
+      .btn-brown {
+        padding: 12px;
+      }
+
       .dashed {
         margin: 20px 0;
         font-size: 12px;
@@ -448,7 +454,6 @@
     .buy-online {
       display: none;
     }
-
 
     // .navbar {
     //   .navbar-collapse {

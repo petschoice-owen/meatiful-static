@@ -8,18 +8,69 @@ body {
   font: normal 125% / 1.4 $text-font-stack;
 }
 
+p {
+  font-size: 15px;
+  line-height: 1.6;
+
+  @media (max-width: 991px) {
+    font-size: 14px;
+  }
+}
+
 .heading {
   position: relative;
+  margin: 0 0 32px;
   width: fit-content;
+  font-family: $font-gotham-bold;
+  font-weight: 700;
+  line-height: 1;
+  font-size: 45px;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 0 2px 4px #000;
 
-  &.dashed:after {
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    z-index: 2;
-    width: 100%;
-    border-bottom: 2px dashed #ccc;
-    transform: translateX(-50%);
+  &-center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &.dashed {
+    padding-bottom: 20px;
+    margin-bottom: 55px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      z-index: 2;
+      width: 100%;
+      border-bottom: 2px dashed #ccc;
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (max-width: 1199px) {
+    font-size: 34px;  
+  }
+
+  @media (max-width: 991px) {
+    font-size: 28px;
+  }
+}
+
+.subheading {
+  margin: 0 0 32px;
+  font-family: $font-libre-baskerville-italic;
+  font-weight: normal;
+  font-size: 28px;
+  text-shadow: 0 2px 4px #000;
+
+  @media (max-width: 1199px) {
+    font-size: 22px;  
+  }
+
+  @media (max-width: 991px) {
+    font-size: 18px;
   }
 }
