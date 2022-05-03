@@ -1,10 +1,10 @@
-// header function
-var headerScrolled = () => {
+// top-navigation function
+var windowScrolled = () => {
   function checkScroll() {
     if ($(window).scrollTop() >= 50) {
-      $(".header-main").addClass("header-scrolled");
+      $(".top-navigation").addClass("scrolled");
     } else {
-      $(".header-main").removeClass("header-scrolled");
+      $(".top-navigation").removeClass("scrolled");
     }
   }
   
@@ -16,7 +16,7 @@ var headerScrolled = () => {
 
 // slider function
 var customSlider = () => {
-  if ($(".custom-slider")) {
+  if ($(".custom-slider").length) {
     $('.custom-slider').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -37,17 +37,22 @@ var customSlider = () => {
 
 // home page - parallax auto margin-top
 var parallaxMargin = () => {
-  if ($(".page-home")) {
-    var topNavHeight = $(".header-main").height();
+  var topNavHeight = $(".top-navigation").height();
+
+  if ($(".page-home").length) {    
     var heroHeight = $(".hero").outerHeight();
     var autoHeight = topNavHeight + heroHeight - 5;
 
     $(".page-home").css("margin-top", autoHeight+"px");
   }
+
+  else {
+    $("main").css("margin-top", topNavHeight+"px");
+  }
 }
 
 // initialize the functions
-headerScrolled();
+windowScrolled();
 
 $(document).ready(function() {
   customSlider();

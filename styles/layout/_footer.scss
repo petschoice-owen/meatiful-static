@@ -5,72 +5,72 @@
 // -----------------------------------------------------------------------------
 
 .footer-main {
-  position: relative;
-  padding: 70px 0;
-  overflow: hidden;
-  font-size: 18px;
-  color: #fff;
-  background: #000;
-
-  .social {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    a {
-      margin: 0 9px;
-
-      &:hover {
-        opacity: 0.5;
-      }
-    }
-  }
-
-  .copyright {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 106px;
-    font-size: 12px;
-
-    p {
-      margin-bottom: 11px;
-    }
-
-    ul {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    li {
-      position: relative;
-      padding: 0 16px;
-
-      &:not(:last-child) {
-        &:after {
-          content: "";
-          position: absolute;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: auto;
-          margin: auto;
-          width: 1px;
-          height: 14px;
-          background-color: #fff;
+    position: relative;
+    padding: 70px 0;
+    overflow: hidden;
+    font-size: 18px;
+    color: #fff;
+    background: #000;
+  
+    .social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        a {
+            margin: 0 9px;
+    
+            &:hover {
+                opacity: 0.5;
+            }
         }
-      }
     }
-
-    a {
-      line-height: 1.6;
-      color: #fff;
-
-      &:hover {
-        color: #96302f;
-        text-decoration: none;
-      }
+  
+    .copyright {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 106px;
+        font-size: 12px;
+    
+        p {
+            margin-bottom: 11px;
+        }
+    
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    
+        li {
+            position: relative;
+            padding: 0 16px;
+    
+            &:not(:last-child) {
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: auto;
+                    margin: auto;
+                    width: 1px;
+                    height: 14px;
+                    background-color: #fff;
+                }
+            }
+        }
+    
+        a {
+            line-height: 1.6;
+            color: #fff;
+    
+            &:hover {
+                color: #96302f;
+                text-decoration: none;
+            }
+        }
     }
-  }
 }

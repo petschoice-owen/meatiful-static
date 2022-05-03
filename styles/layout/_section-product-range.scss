@@ -1,0 +1,65 @@
+//main: ../main.scss
+
+// -------------------------------------------------------------------------------------------
+// This file contains all styles related to the section product range of the site/application.
+// -------------------------------------------------------------------------------------------
+
+.product-range {
+    position: relative;
+    padding: 80px 0;
+    color: #fff;
+    background-color: #000;
+
+    .items {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        width: 1030px;
+    }
+
+    .btn-brown {
+        margin: 0 15px;
+        width: 33.33%;
+    }
+
+    @media (max-width: 1439px) {
+        .items {
+            width: 850px;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .container {
+            max-width: 100%;
+        }
+
+        .items {
+            width: 100%;
+        }
+
+        .btn-brown {
+            margin: 0 10px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .heading {
+            text-align: center;
+        }
+        
+        .items {
+            flex-direction: column;
+            width: fit-content;
+            min-width: 200px;
+        }
+
+        .btn-brown {
+            margin: 0;
+            width: 100%;
+    
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

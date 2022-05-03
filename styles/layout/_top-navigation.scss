@@ -1,10 +1,10 @@
 //main: ../main.scss
 
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the header of the site/application.
-// -----------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------
+// This file contains all styles related to the top-navigation of the site/application.
+// ------------------------------------------------------------------------------------
 
-.header-main {
+.top-navigation {
   position: fixed;
   top: 0;
   right: initial;
@@ -12,7 +12,8 @@
   left: 0;
   z-index: 99;
   width: 100%;
-  background: url('../assets/images/bg-top-nav.jpg') no-repeat center top;
+  background-repeat: no-repeat;
+  background-position: center top;
   background-size: cover;
   opacity: 1;
   transition: .35s ease-in-out all;
@@ -262,7 +263,7 @@
     }
   }
 
-  // &.header-scrolled {
+  // &.scrolled {
   //   .logo-image {
   //     max-height: 50px;
   //   }
@@ -386,6 +387,10 @@
           text-decoration: none;
         }
       }
+
+      img {
+        max-height: 38px;
+      }
     }
 
     .buy-online {
@@ -502,7 +507,5 @@
     //     }
     //   }
     // }
-
-
   }
 }

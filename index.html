@@ -11,14 +11,14 @@
   <meta property="og:image" content="assets/images/logo.png">
   <title>Meatiful | Natural & Delicious Dog Food Sausages Online</title>
   <link rel="icon" href="assets/images/favicon.ico" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+  <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" /> -->
+  <link rel="stylesheet" type="text/css" href="styles/vendors/slick.min.css" />
+  <link rel="stylesheet" type="text/css" href="styles/vendors/slick-theme.min.css" />
   <link rel="stylesheet" type="text/css" href="styles/main.min.css" />
 </head>
 
 <body>
-  <header class="header-main">
+  <div class="top-navigation" style="background-image: url(assets/images/bg-top-nav.jpg);">
     <div class="wrapper">
       <nav class="navbar navbar-expand-xl">
         <div class="container-fluid">
@@ -49,7 +49,7 @@
               </li>
             </ul>
             <div class="social-mobile">
-              <a href="#"><i class="fa-solid fa-phone"></i></a>
+              <a href="#"><img src="./assets/images/icon-phone.png" alt=""></a>
               <a href="#"><img src="./assets/images/icon-facebook.svg" alt=""></a>
               <a href="#"><img src="./assets/images/icon-instagram.svg" alt=""></a>
             </div>
@@ -68,9 +68,9 @@
       </div>
       <img src="./assets/images/torn-bottom.png" class="torn-bottom" alt="" >
     </div>
-  </header>
+  </div>
   <main class="page-home">
-    <section class="hero">
+    <section class="hero hero-parallax">
       <div class="custom-slider-wrapper">
         <div class="custom-slider">
           <div class="slide-item" style="background-image: url(./assets/images/hero-slider-1.jpg);"></div>
@@ -91,7 +91,7 @@
         </div>
       </div>
     </section>
-    <section class="featured">
+    <section class="featured" style="background-image: url(assets/images/bg-home-featured.jpg);">
       <div class="button-top">
         <div class="button-wrapper">
           <a href="#" class="btn-brown arrow-right">See Varieties</a>
@@ -130,7 +130,7 @@
     </section>
     <section class="product-range">
       <div class="container">
-        <h2 class="heading heading-center">Our Products Range</h2>
+        <h2 class="heading heading-center">Our Product Range</h2>
         <div class="items">
           <a href="#" class="btn-brown arrow-right">Buy Online</a>
           <a href="#" class="btn-brown arrow-right">Where to Buy</a>
@@ -194,7 +194,7 @@
       </div>
     </section>
   </main>
-  <footer class="footer-main">
+  <div class="footer-main">
     <div class="container">
       <div class="social">
         <a href="#"><img src="./assets/images/icon-facebook.svg" alt=""></a>
@@ -209,12 +209,12 @@
         </ul>
       </div>
     </div>
-  </footer>
+  </div>
 
   <script src="scripts/vendors/jquery.min.js" id="jquery_min_js"></script>
   <script src="scripts/vendors/popper.min.js" defer onload="" id="popper_min_js"></script>
   <script src="scripts/vendors/bootstrap.min.js" defer onload="" id="bootstrap_min_js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js" defer onload="" id="slick_min_js"></script>
+  <script src="scripts/vendors/slick.min.js" defer onload="" id="slick_min_js"></script>
   <!-- move this to the <head> below the last <link> when integrating to WordPress -->
   <!-- <script src="scripts/vendors/lazyload.min.js"></script>  -->
   <script src="scripts/script.js" defer onload="" id="scripts_js"></script>

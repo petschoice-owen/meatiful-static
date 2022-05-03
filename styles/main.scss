@@ -8,7 +8,8 @@
 
 // 2. Vendors
 @import
-  'vendors/swiper.min.css',
+  'vendors/slick.min.css',
+  'vendors/slick-theme.min.css',
   'vendors/bootstrap.min.css';
 
 // 3. Base stuff
@@ -20,10 +21,10 @@
 
 // 4. Layout-related sections
 @import
-  'layout/header',
+  'layout/top-navigation',
   'layout/footer',
-  'layout/section-cta',
-  'layout/section-hero';
+  'layout/section-hero',
+  'layout/section-product-range';
 
 // 5. Components
 @import
@@ -31,4 +32,5 @@
 
 // 6. Page-specific styles
 @import
-  'pages/home';
+  'pages/home',
+  'pages/values';

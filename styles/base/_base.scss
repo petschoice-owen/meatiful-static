@@ -70,7 +70,7 @@ input[type="text"] {
   &[aria-expanded="true"] {
     .icon-bar {
       &:first-child {
-        @include transform(rotate(225deg) translate(-8px, -5px));
+        @include transform(rotate(225deg) translate(-9px, -5px));
       }
 
       &:nth-child(2) {

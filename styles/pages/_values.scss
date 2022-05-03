@@ -1,0 +1,111 @@
+//main: ../main.scss
+
+// -------------------------------------------------------------------------------------------
+// This file contains styles that are specific to the values page.
+// -------------------------------------------------------------------------------------------
+
+.page-values {
+    .content {
+        .wrapper {
+            position: relative;
+            top: -70px;
+            padding: 90px;
+            margin-bottom: -70px;
+            background-repeat: repeat-y;
+            background-size: 100%;
+        }
+
+        .item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 30px;
+
+            &:not(:last-child) {
+                margin-bottom: 50px;
+            }
+        }
+
+        .image-holder {
+            position: relative;
+            padding: 20px 40px;
+            background-color: #fff;
+
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 12px;
+                height: 100%;
+                margin: auto;
+                background-size: auto;
+            }
+
+            &:before {
+                left: -10px;
+                background: url(../assets/images/torn-left.png) repeat-y right;
+            }
+
+            &:after {
+                right: -10px;
+                background: url(../assets/images/torn-right.png) repeat-y left;
+            }
+
+            img {
+                max-width: 140px;
+            }
+        }
+
+        .text-holder {
+            margin-top: 30px;
+            max-width: 420px;
+            color: #fff;
+            text-align: center;
+
+            p {
+                font-size: 17px;
+            }
+        }
+
+        @media (max-width: 1399px) {
+            .wrapper {
+                top: -60px;
+                margin-bottom: -60px;
+            }
+        }
+
+        @media (max-width: 1199px) {
+            .wrapper {
+                top: 0;
+                margin-bottom: 0;
+                padding: 50px;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .text-holder {
+                max-width: 370px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .wrapper {
+                padding: 30px 25px;
+            }
+
+            .text-holder {                
+                p {
+                    font-size: 15px;
+                }
+            }
+        }
+
+        @media (max-width: 575px) {
+            .text-holder {
+                max-width: 220px;
+            }
+        }
+    }
+}
