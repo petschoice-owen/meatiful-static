@@ -151,7 +151,7 @@
     }
 
     .product-range {
-        padding-top: 0;
+        padding: 0 0 80px;
     }
   
     // .product-range {
@@ -261,12 +261,6 @@
         .featured {
             padding: 140px 0 100px;
         }
-    
-        // .product-range {
-        //     .items {
-        //         width: 850px;
-        //     }
-        // }
     }
   
     @media (max-width: 1199px) {
@@ -304,20 +298,6 @@
                 opacity: 0;
             }
         }
-    
-        // .product-range {
-        //     .container {
-        //         max-width: 100%;
-        //     }
-    
-        //     .items {
-        //         width: 100%;
-        //     }
-    
-        //     .btn-brown {
-        //         margin: 0 10px;
-        //     }
-        // }
     
         .news {
             .container {
@@ -373,27 +353,6 @@
                 margin: 20px 0 30px;
             }
         }
-    
-        // .product-range {
-        //     .heading {
-        //         text-align: center;
-        //     }
-            
-        //     .items {
-        //         flex-direction: column;
-        //         width: fit-content;
-        //         min-width: 200px;
-        //     }
-    
-        //     .btn-brown {
-        //         margin: 0;
-        //         width: 100%;
-        
-        //         &:not(:last-child) {
-        //             margin-bottom: 10px;
-        //         }
-        //     }
-        // }
     
         .news {
             .column:not(:last-child) {
