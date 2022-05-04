@@ -22,7 +22,8 @@
 // 4. Components
 @import
   'components/buttons',
-  'components/contact-form';
+  'components/contact-form',
+  'components/masonry';
 
 // 5. Layout-related sections
 @import
@@ -35,4 +36,5 @@
 @import
   'pages/home',
   'pages/values',
-  'pages/legal';
+  'pages/legal',
+  'pages/news';

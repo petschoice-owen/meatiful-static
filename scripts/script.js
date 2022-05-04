@@ -51,6 +51,16 @@ var parallaxMargin = () => {
   }
 }
 
+// masonry function
+var masonry = () => {
+  if ($(".masonry").length) {
+    $('.grid').masonry({
+      itemSelector: '.grid-item',
+      // columnWidth: 200
+    });
+  }  
+}
+
 // initialize the functions
 windowScrolled();
 
@@ -63,3 +73,6 @@ $(window).resize(function() {
   parallaxMargin();
 });
 
+window.onload = function() {
+  masonry();
+}

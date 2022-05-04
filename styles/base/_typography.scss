@@ -50,6 +50,10 @@ p {
     }
   }
 
+  &.no-margin {
+    margin-bottom: 0;
+  }
+
   @media (max-width: 1199px) {
     font-size: 34px;  
   }

@@ -1,0 +1,17 @@
+//main: ../main.scss
+
+// -------------------------------------------------------------------------------------------
+// This file contains styles that are specific to the news page.
+// -------------------------------------------------------------------------------------------
+
+.news.content {
+    .masonry {
+        padding: 30px;
+    }
+
+    @media (max-width: 1199px) {
+        .masonry {
+            padding: 30px 0;
+        }
+    }
+}
