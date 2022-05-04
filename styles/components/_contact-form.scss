@@ -1,0 +1,240 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the contact form component.
+// -----------------------------------------------------------------------------
+
+.contact-form {
+  font-size: 18px;
+  color: $text-color;
+  font-family: $font-gotham-book;
+
+  .required-asterisk {
+    color: #e42313;
+  }
+
+  .columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 0 !important;
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0 15px;
+    width: 50%;
+    margin-bottom: 25px !important;
+
+    &-full {
+      width: 100%;
+    }
+
+    &-right {
+      margin-left: auto;
+    }
+
+    label {
+      display: flex;
+      width: fit-content;
+      margin-bottom: 5px !important;
+      font-family: $font-gotham-bold;
+    }
+
+    textarea {
+      width: 100%;
+      max-width: 100%;
+      height: 120px;
+      padding: 8px 15px;
+      font-family: $font-gotham-book;
+      font-size: 16px;
+      color: $text-color;
+      background: transparent;
+      border: 1px solid #dbdbdb;
+      border-radius: 0;
+      transition: .35s all ease-in-out;
+      resize: none;
+
+      &:focus {
+        border-color: $text-color;
+      }
+
+      @include on-event() {
+        border-radius: 0;
+        outline: none
+      }
+    }
+  
+    input {
+      width: 100%;
+      max-width: 100%;
+      height: 45px;
+      padding: 8px 15px;
+      font-family: $font-gotham-book;
+      font-size: 16px;
+      color: $text-color;
+      background: transparent;
+      border: 1px solid #dbdbdb;
+      border-radius: 0;
+      transition: .35s all ease-in-out;
+
+      &:focus {
+        border-color: $text-color;
+      }
+
+      @include on-event() {
+        border-radius: 0;
+        outline: none
+      }
+    }
+
+    select {
+      width: 100%;
+      max-width: 100%;
+      height: 45px;
+      padding: 8px 50px 8px 15px;
+      font-family: $font-gotham-book;
+      font-size: 16px;
+      color: $text-color;
+      background: transparent;
+      border: 1px solid #dbdbdb;
+      border-radius: 0;
+      transition: .35s all ease-in-out;
+      appearance: none;
+      cursor: pointer;
+
+      &::-ms-expand {
+        display: none;
+      }
+
+      &:focus {
+        border-color: $text-color;
+      }
+
+      @include on-event() {
+        border-radius: 0;
+        outline: none;
+      }
+    }
+
+    option {
+      padding: 8px 15px;
+      font-family: $font-gotham-book;
+      font-size: 16px;
+    }
+
+    .field-select {
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 15px;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        margin: auto;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid $text-color;
+        pointer-events: none;
+      }
+    }
+
+    .field-submit {
+      @extend .btn-brown;
+      @extend .arrow-right;
+      margin-left: auto;
+      padding: 0;
+
+      &:before,
+      &:after {
+        pointer-events: none;
+      }
+
+      &:after {
+        position: absolute;
+        bottom: 0;
+        margin: auto 32px auto 0;
+        border-top-width: 7px;
+        border-bottom-width: 7px;
+        border-left-width: 12px;
+      }
+      
+      input {
+        height: auto;
+        padding: 18px 58px 18px 30px;
+        font-weight: 700;
+        color: #fff;
+        text-transform: uppercase;
+        border: none;
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    .column {
+      width: 100%;
+      padding: 0;
+
+      input,
+      select,
+      option,
+      textarea {
+        font-size: 15px;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .column {
+      .label {
+        display: block;
+      }
+
+      input,
+      select,
+      option,
+      textarea {
+        font-size: 12px;
+      }
+
+      input {
+        height: 40px;
+        padding: 6px 12px;
+      }
+
+      textarea {
+        padding: 6px 12px;
+      }
+
+      select {
+        padding: 6px 32px 6px 12px;
+      }
+
+      .field-select:before {
+        right: 12px;
+        border-left-width: 7px;
+        border-right-width: 7px;
+        border-top-width: 7px;
+      }
+
+      .field-submit {
+        margin-right: auto;
+
+        &:after {
+          margin: auto 25px auto 0;
+        }
+
+        input {
+          padding: 14px 50px 14px 25px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

@@ -19,16 +19,17 @@
   'base/fonts',
   'base/typography';
 
-// 4. Layout-related sections
+// 4. Components
+@import
+  'components/buttons',
+  'components/contact-form';
+
+// 5. Layout-related sections
 @import
   'layout/top-navigation',
   'layout/footer',
   'layout/section-hero',
   'layout/section-product-range';
-
-// 5. Components
-@import
-  'components/buttons';
 
 // 6. Page-specific styles
 @import

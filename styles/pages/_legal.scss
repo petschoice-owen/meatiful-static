@@ -54,6 +54,40 @@
             }
         }
 
+        .item.item-dashed {
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            width: fit-content;
+            max-width: 600px;
+
+            &:after {
+                content: "";
+                position: absolute;
+                // bottom: -5px;
+                bottom: 0;
+                left: 50%;
+                z-index: 2;
+                width: 100%;
+                border-bottom: 2px dashed $text-color;
+                transform: translateX(-50%);
+            }
+
+            *:not(:last-child) {
+                margin-bottom: 0;
+            }
+
+            * + h1, * + h2, * + h3, * + h4, * + h5, * + h6 {
+                margin-top: 0;
+            }
+
+            p {
+                line-height: 1.4;
+            }
+        }
+
         h1, h2, h3, h4, h5, h6 {
             font-family: $font-gotham-bold;
             text-transform: none;
@@ -89,14 +123,15 @@
             line-height: 1.4;
         }
 
-        p, ul, ol, a {
+        // p, ul, ol, a {
+        p, ul, ol, label {
             font-size: 18px;
             line-height: 1.6;
             color: $text-color;
         }
 
         strong, b {
-            font-weight: 700;
+            font-family: $font-gotham-bold;
         }
 
         ul {
@@ -108,10 +143,16 @@
         }
 
         a {
-            color: #96302f;
+            color: $text-color;
 
             &:hover {
-                text-decoration: underline;
+                // text-decoration: underline;
+                color: #96302f;
+                text-decoration: none;
+            }
+
+            @include on-event() {
+                text-decoration: none;
             }
         }
 
@@ -163,9 +204,14 @@
                     font-size: 18px;
                 }
         
-                p, ul, ol, a {
+                // p, ul, ol, a {
+                p, ul, ol, label {
                     font-size: 16px;
                 }
+            }
+
+            .item.item-dashed {
+                max-width: 400px;
             }
         }
 
@@ -214,8 +260,9 @@
                     font-size: 16px;
                 }
         
-                p, ul, ol, a {
-                    font-size: 14px;
+                // p, ul, ol, a {
+                p, ul, ol, label {
+                    font-size: 13px;
                 }
             }
         }
