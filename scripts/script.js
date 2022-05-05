@@ -61,12 +61,50 @@ var masonry = () => {
   }  
 }
 
+// product quantity function
+var productQuantity = () => {
+  if ($(".qty-input").length) {
+    $('.increment-btn').click(function (e) {
+      e.preventDefault();
+  
+      var inc_value = $(this).closest('.product-quantity').find('.qty-input').val();
+      var value = parseInt(inc_value, 10);
+      value = isNaN(value) ? 0 : value;
+      if (value < 99) {
+          value++;
+          $(this).closest('.product-quantity').find('.qty-input').val(value);
+      }
+    });
+  
+    $('.decrement-btn').click(function (e) {
+      e.preventDefault();
+  
+      var dec_value = $(this).closest('.product-quantity').find('.qty-input').val();
+      var value = parseInt(dec_value, 10);
+      value = isNaN(value) ? 0 : value;
+      if (value > 1) {
+          value--;
+          $(this).closest('.product-quantity').find('.qty-input').val(value);
+      }
+    });
+  }
+}
+
+// product tabs function
+var productTabs = () => {
+  if ($(".product-tabs").length) {
+    console.log("product-tabs");
+  }  
+}
+
 // initialize the functions
 windowScrolled();
 
 $(document).ready(function() {
   customSlider();
   parallaxMargin();
+  productQuantity();
+  productTabs();
 });
 
 $(window).resize(function() {

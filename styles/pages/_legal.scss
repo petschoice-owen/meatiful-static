@@ -66,7 +66,6 @@
             &:after {
                 content: "";
                 position: absolute;
-                // bottom: -5px;
                 bottom: 0;
                 left: 50%;
                 z-index: 2;
@@ -123,7 +122,6 @@
             line-height: 1.4;
         }
 
-        // p, ul, ol, a {
         p, ul, ol, label {
             font-size: 18px;
             line-height: 1.6;
@@ -146,7 +144,6 @@
             color: $text-color;
 
             &:hover {
-                // text-decoration: underline;
                 color: #96302f;
                 text-decoration: none;
             }
@@ -204,7 +201,6 @@
                     font-size: 18px;
                 }
         
-                // p, ul, ol, a {
                 p, ul, ol, label {
                     font-size: 16px;
                 }
@@ -260,7 +256,6 @@
                     font-size: 16px;
                 }
         
-                // p, ul, ol, a {
                 p, ul, ol, label {
                     font-size: 13px;
                 }
