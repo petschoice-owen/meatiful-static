@@ -53,7 +53,7 @@ var parallaxMargin = () => {
 
 // masonry function
 var masonry = () => {
-  if ($(".masonry").length) {
+  if ($(".masonry .grid-item").length) {
     $('.grid').masonry({
       itemSelector: '.grid-item',
       // columnWidth: 200
