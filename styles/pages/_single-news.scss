@@ -61,13 +61,14 @@
         }
 
         h1 {
-            font-size: 40px;
+            font-size: 36px;
 
             &.title {
                 position: relative;
                 width: fit-content;
                 padding-bottom: 10px;
                 margin-bottom: 30px !important;
+                text-transform: uppercase;
 
                 &:after {
                     content: "";
@@ -83,7 +84,7 @@
         }
 
         h2 {
-            font-size: 34px;
+            font-size: 32px;
         }
 
         h3 {
@@ -153,20 +154,6 @@
                 top: -60px;
                 margin-bottom: -60px;
             }
-
-            .holder {
-                h1 {
-                    font-size: 36px;
-                }
-        
-                h2 {
-                    font-size: 32px;
-                }
-        
-                h3 {
-                    font-size: 28px;
-                }
-            }
         }
 
         @media (max-width: 1199px) {
@@ -206,27 +193,6 @@
         }
 
         @media (max-width: 991px) {
-            .holder {
-                padding: 40px;
-                font-size: 16px;
-                line-height: 1.5;
-
-                *:not(:last-child) {
-                    padding-bottom: 15px;
-                }
-        
-                p, ul, ol, label {
-                    font-size: 16px;
-                    line-height: 1.5;
-                }
-
-                p:not(:last-child) {
-                    padding-bottom: 10px;
-                }
-            }
-        }
-
-        @media (max-width: 767px) {
             .wrapper {
                 padding: 30px 25px;
             }

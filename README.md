@@ -6,5 +6,5 @@
 * Install dependencies with `npm install`
 * Run localhost environment with `npm run dev`
 
-## Version
-* 1.1
+## Project Name
+[Meatiful] (https://petschoice-owen.github.io/meatiful/)
