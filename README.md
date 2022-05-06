@@ -7,4 +7,4 @@
 * Run localhost environment with `npm run dev`
 
 ## Project Name
-[Meatiful] (https://petschoice-owen.github.io/meatiful/)
+[Meatiful](https://petschoice-owen.github.io/meatiful/)
