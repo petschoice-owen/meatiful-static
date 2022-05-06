@@ -1,10 +1,10 @@
 //main: ../main.scss
 
 // -------------------------------------------------------------------------------------------
-// This file contains styles that are specific to the legal pages.
+// This file contains styles that are specific to the single news page.
 // -------------------------------------------------------------------------------------------
 
-.page-legal {
+.single-news {
     .content {
         .wrapper {
             position: relative;
@@ -46,44 +46,11 @@
             }
 
             *:not(:last-child) {
-                margin-bottom: 20px;
+                padding-bottom: 15px;
             }
 
             * + h1, * + h2, * + h3, * + h4, * + h5, * + h6 {
-                margin-top: 30px;
-            }
-        }
-
-        .item.item-dashed {
-            position: relative;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 30px;
-            padding-bottom: 15px;
-            width: fit-content;
-            max-width: 600px;
-
-            &:after {
-                content: "";
-                position: absolute;
-                bottom: 0;
-                left: 50%;
-                z-index: 2;
-                width: 100%;
-                border-bottom: 2px dashed $text-color;
-                transform: translateX(-50%);
-            }
-
-            *:not(:last-child) {
-                margin-bottom: 0;
-            }
-
-            * + h1, * + h2, * + h3, * + h4, * + h5, * + h6 {
-                margin-top: 0;
-            }
-
-            p {
-                line-height: 1.4;
+                padding-top: 20px;
             }
         }
 
@@ -94,23 +61,41 @@
         }
 
         h1 {
-            font-size: 44px;
+            font-size: 40px;
+
+            &.title {
+                position: relative;
+                width: fit-content;
+                padding-bottom: 10px;
+                margin-bottom: 30px !important;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    z-index: 2;
+                    width: 100%;
+                    border-bottom: 2px dashed #ccc;
+                    transform: translateX(-50%);
+                }
+            }
         }
 
         h2 {
-            font-size: 38px;
+            font-size: 34px;
         }
 
         h3 {
-            font-size: 32px;
-        }
-
-        h4 {
             font-size: 28px;
         }
 
-        h5 {
+        h4 {
             font-size: 24px;
+        }
+
+        h5 {
+            font-size: 22px;
         }
 
         h6 {
@@ -128,7 +113,7 @@
         }
 
         ul {
-            list-style: disc;
+            list-style: square;
         }
 
         ul, ol {
@@ -136,22 +121,51 @@
         }
 
         a {
-            color: $text-color;
+            color: #96302f;
 
             &:hover {
                 color: #96302f;
-                text-decoration: none;
+                text-decoration: underline;
             }
+        }
 
-            @include on-event() {
-                text-decoration: none;
-            }
+        .featured-image {
+            margin-bottom: 10px;
+        }
+
+        .image-holder {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 15px;
+            box-shadow: 0 3px 10px 3px rgba(0,0,0,.1);
+        }
+
+        img {
+            max-width: 100%;
         }
 
         @media (max-width: 1399px) {
             .wrapper {
                 top: -60px;
                 margin-bottom: -60px;
+            }
+
+            .holder {
+                h1 {
+                    font-size: 36px;
+                }
+        
+                h2 {
+                    font-size: 32px;
+                }
+        
+                h3 {
+                    font-size: 28px;
+                }
             }
         }
 
@@ -164,24 +178,17 @@
 
             .holder {
                 padding: 50px;
-            }
-        }
-
-        @media (max-width: 991px) {
-            .holder {
-                padding: 40px;
-                font-size: 16px;
 
                 h1 {
-                    font-size: 40px;
+                    font-size: 32px;
                 }
         
                 h2 {
-                    font-size: 34px;
+                    font-size: 28px;
                 }
         
                 h3 {
-                    font-size: 28px;
+                    font-size: 24px;
                 }
         
                 h4 {
@@ -195,14 +202,27 @@
                 h6 {
                     font-size: 18px;
                 }
+            }
+        }
+
+        @media (max-width: 991px) {
+            .holder {
+                padding: 40px;
+                font-size: 16px;
+                line-height: 1.5;
+
+                *:not(:last-child) {
+                    padding-bottom: 15px;
+                }
         
                 p, ul, ol, label {
                     font-size: 16px;
+                    line-height: 1.5;
                 }
-            }
 
-            .item.item-dashed {
-                max-width: 400px;
+                p:not(:last-child) {
+                    padding-bottom: 10px;
+                }
             }
         }
 
@@ -214,13 +234,18 @@
             .holder {
                 padding: 20px;
                 font-size: 14px;
+                line-height: 1.4;
 
                 *:not(:last-child) {
-                    margin-bottom: 15px;
+                    padding-bottom: 10px;
+                }
+
+                p:not(:last-child) {
+                    padding-bottom: 7px;
                 }
 
                 * + h1, * + h2, * + h3, * + h4, * + h5, * + h6 {
-                    margin-top: 25px;
+                    padding-top: 15px;
                 }
 
                 ul, ol {
@@ -252,8 +277,13 @@
                 }
         
                 p, ul, ol, label {
-                    font-size: 13px;
+                    font-size: 14px;
+                    line-height: 1.4;
                 }
+            }
+
+            .image-holder {
+                padding: 10px;
             }
         }
     }

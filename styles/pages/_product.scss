@@ -54,6 +54,10 @@
         line-height: 1.5;
     }
 
+    strong, b {
+        font-weight: 700;
+    }
+
     .content-image {
         padding-right: 25px;
 
@@ -86,11 +90,15 @@
             align-items: center;
             width: 100%;
             max-width: 25%;
+            height: 133px;
             padding: 5px;
             cursor: pointer;
         }
 
         .thumbnail-wrapper {
+            display: flex;
+            align-items: center;
+            height: 100%;
             padding: 15px;
             background-color: #fff;
             border: 1px solid rgba(0,0,0,0.09);
@@ -192,10 +200,12 @@
             padding: 8px 40px 8px 16px;
             height: 40px;
             font-size: 16px;
+            color: $text-color;
             border: 1px solid rgba(0,0,0,.09);
             outline: none;
             box-shadow: none;
             appearance: none;
+            background-color: #fff;
         }
 
         .quantity {
@@ -298,6 +308,10 @@
             .featured {
                 height: 433px;
             }
+
+            .thumbnail {
+                height: 110px;
+            }
         }
     }
 
@@ -311,6 +325,10 @@
         .content-image {
             .featured {
                 height: 383px;
+            }
+
+            .thumbnail {
+                height: 98px;
             }
         }
 
@@ -334,6 +352,24 @@
         .product-content-wrapper {
             padding: 15px;
         }
+
+        .content-column {
+            max-width: 100%;
+            padding: 0;
+        }
+
+        .content-image {
+            margin-bottom: 50px;
+
+            .featured {
+                height: 600px;
+                padding: 40px;
+            }
+
+            .thumbnail {
+                height: 154px;
+            }
+        }
     }
 
     @media (max-width: 767px) {
@@ -343,6 +379,21 @@
 
         .content-wrapper {
             padding: 25px 20px;
+        }
+
+        .content-image {
+            .featured {
+                height: 85vw;
+                padding: 25px;
+            }
+
+            .thumbnail {
+                height: 20vw;
+            }
+
+            .thumbnail-wrapper {
+                padding: 10px;
+            }
         }
     }
 }
