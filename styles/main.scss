@@ -2,43 +2,43 @@
 
 // 1. Configuration and helpers
 @import
-  'utils/variables',
-  'utils/functions',
-  'utils/mixins';
+    'utils/variables',
+    'utils/functions',
+    'utils/mixins';
 
 // 2. Vendors
 @import
-  'vendors/slick.min.css',
-  'vendors/slick-theme.min.css',
-  'vendors/bootstrap.min.css';
+    'vendors/slick.min.css',
+    'vendors/slick-theme.min.css',
+    'vendors/bootstrap.min.css';
 
 // 3. Base stuff
 @import
-  'base/reset',
-  'base/base',
-  'base/fonts',
-  'base/typography';
+    'base/reset',
+    'base/base',
+    'base/fonts',
+    'base/typography';
 
 // 4. Components
 @import
-  'components/buttons',
-  'components/contact-form',
-  'components/masonry',
-  'components/product-tabs';
+    'components/buttons',
+    'components/contact-form',
+    'components/masonry',
+    'components/product-tabs';
 
 // 5. Layout-related sections
 @import
-  'layout/top-navigation',
-  'layout/footer',
-  'layout/section-hero',
-  'layout/section-product-range';
+    'layout/top-navigation',
+    'layout/footer',
+    'layout/section-hero',
+    'layout/section-product-range';
 
 // 6. Page-specific styles
 @import
-  'pages/home',
-  'pages/values',
-  'pages/legal',
-  'pages/news',
-  'pages/varieties',
-  'pages/product',
-  'pages/single-news';
+    'pages/home',
+    'pages/values',
+    'pages/legal',
+    'pages/news',
+    'pages/varieties',
+    'pages/product',
+    'pages/single-news';

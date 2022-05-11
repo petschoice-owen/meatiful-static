@@ -12,28 +12,31 @@ small, strike, strong, sub, sup, tt, var,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td {
-  border: 0;
-  font-family: inherit;
-  font-size: 100%;
-  font-style: inherit;
-  font-weight: inherit;
-  margin: 0;
-  outline: 0;
-  padding: 0;
-  vertical-align: baseline;
+    border: 0;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
 }
+
 html {
-  font-size: 100%;
-  overflow-y: scroll;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
+    font-size: 100%;
+    overflow-y: scroll;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
 }
+
 body {
-  line-height: 1;
-  text-rendering: optimizeSpeed;
-  background: #fff;
-  scroll-behavior: smooth;
+    line-height: 1;
+    text-rendering: optimizeSpeed;
+    background: #fff;
+    scroll-behavior: smooth;
 }
+
 article,
 aside,
 details,
@@ -44,33 +47,41 @@ header,
 hgroup,
 nav,
 section {
-  display: block;
+    display: block;
 }
+
 ol, ul {
-  list-style: none;
+    list-style: none;
 }
+
 table {
-  border-collapse: separate;
-  border-spacing: 0;
+    border-collapse: separate;
+    border-spacing: 0;
 }
+
 caption, th, td {
-  font-weight: normal;
-  text-align: left;
+    font-weight: normal;
+    text-align: left;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: "";
+    content: "";
 }
+
 blockquote, q {
-  quotes: "" "";
+    quotes: "" "";
 }
+
 a:focus {
-  outline: thin dotted;
+    outline: thin dotted;
 }
+
 a:hover,
 a:active {
-  outline: 0;
+    outline: 0;
 }
+
 a img {
-  border: 0;
+    border: 0;
 }
