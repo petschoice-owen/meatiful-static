@@ -1,0 +1,413 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the pop-up component.
+// -----------------------------------------------------------------------------
+
+.pop-up-show {
+    overflow-y: hidden;
+
+    .pop-up {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    @media (max-width: 767px) {
+        overflow-y: auto;
+    }
+}
+
+.pop-up {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: none;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.7);
+
+    &-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .wrapper {
+        position: relative;
+
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 80px;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        &:before {
+            left: -40px;
+            margin-top: 15%;
+            background: url(../assets/images/image-pop-up-left.png) no-repeat left;
+            background-size: contain;
+        }
+
+        &:after {
+            right: -40px;
+            background: url(../assets/images/image-pop-up-right.png) no-repeat right;
+            background-size: contain;
+        }
+    }
+
+    &-close {
+        position: absolute;
+        top: -45px;
+        right: -25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 32px;
+        height: 32px;
+        opacity: .5;
+        cursor: pointer;
+        transition: .35s ease-in-out all;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &:before, 
+        &:after {
+            content: "";
+            position: absolute;
+            right: 0;
+            left: 0;
+            width: 4px;
+            height: 22px;
+            margin: auto;
+            background-color: #333;
+        }
+
+        &:before {
+            transform: rotate(45deg);
+        }
+
+        &:after {
+            transform: rotate(-45deg);
+        }
+    }
+
+    &-content {
+        position: relative;
+        width: 100%;
+        max-width: 600px;
+        padding: 50px 40px;
+        background-color: #fff;
+
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 25px;
+        }
+
+        &:before {
+            bottom: 100%;
+            background: url(../assets/images/bg-pop-up-top.png) repeat-x bottom;
+        }
+
+        &:after {
+            top: 100%;
+            background: url(../assets/images/bg-pop-up-bottom.png) repeat-x top;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: $font-gotham-bold;
+            text-transform: none;
+        }
+
+        h1 {
+            font-size: 44px;
+        }
+
+        h2 {
+            font-size: 38px;
+        }
+
+        h3 {
+            font-size: 32px;
+        }
+
+        h4 {
+            font-size: 28px;
+        }
+
+        h5 {
+            font-size: 24px;
+        }
+
+        h6 {
+            font-size: 20px;
+        }
+
+        p, ul, ol, label {
+            font-size: 18px;
+            line-height: 1.6;
+            color: $text-color;
+        }
+
+        strong, b {
+            font-family: $font-gotham-bold;
+        }
+
+        ul {
+            list-style: disc;
+        }
+
+        ul, ol {
+            padding-left: 40px;
+        }
+
+        a {
+            color: $text-color;
+
+            &:hover {
+                color: #96302f;
+                text-decoration: none;
+            }
+
+            @include on-event() {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .pop-up-title {
+        position: relative;
+        margin-top: 10px;
+        font-size: 52px;
+        line-height: 1;
+
+        &-dashed {
+            padding-bottom: 40px;
+            margin-bottom: 40px;
+
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                z-index: 2;
+                width: 100px;
+                border-bottom: 2px dashed #999;
+                transform: translateX(-50%);
+            }
+        }
+    }
+
+    &-input {
+        width: 330px;
+        max-width: 100%;
+        height: 45px;
+        padding: 8px 15px;
+        font-family: $font-gotham-book;
+        font-size: 16px;
+        color: $text-color;
+        background: #fff;
+        border: 1px solid #dbdbdb;
+        border-radius: 0;
+        transition: .35s all ease-in-out;
+        outline: none;
+
+        &:focus {
+            border-color: #222;
+            border-radius: 0;
+            outline: none;
+        }
+    }
+
+    .input-wrapper {
+        display: flex;
+        justify-content: center;
+
+        & + .input-wrapper {
+            margin-top: 10px;
+        }
+    }
+
+    .checkbox-wrapper {
+        width: 330px;
+        max-width: 100%;
+        margin-top: 15px;
+        margin-right: auto;
+        margin-left: auto;
+        
+        label {
+            position: relative;
+            width: 100%;
+            padding-left: 30px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        input {
+            display: none;
+
+            &:checked ~ .checkmark {
+                background-color: #96302f;
+                border-color: #96302f;
+    
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            background-color: #fff;
+            border: 1px solid #dbdbdb;
+            transition: .35s ease-in-out all;
+
+            &:after {
+                content: "";
+                position: absolute;
+                left: 7px;
+                top: 3px;
+                width: 5px;
+                height: 10px;
+                border: solid #fff;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+                opacity: 0;
+                transition: .35s ease-in-out all;
+            }
+        }
+    }
+
+    .button-wrapper {
+        position: relative;
+        display: flex;
+        width: 330px;
+        max-width: 100%;
+        margin: 25px auto 0;
+        justify-content: center;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: 5px;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            pointer-events: none;
+        }
+    }
+
+    &-button {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 16px;
+        font-family: $font-gotham-bold;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: #96302f;
+        border: 0;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: .35s ease-in-out all;
+
+        &:hover {
+            background-color: #000;
+        }
+    }
+
+    @media (max-width: 767px) {
+        &-wrapper {
+            padding: 20px;
+        }
+
+        &-close {
+            top: -40px;
+            right: -20px;
+        }
+
+        &-content {
+            padding: 30px 25px;
+        }
+
+        h5 {
+            font-size: 16px;
+        }
+
+        .pop-up-title {
+            font-size: 25px;
+
+            &-dashed {
+                padding-bottom: 30px;
+                margin-bottom: 30px;
+
+                &:after {
+                    width: 70px;
+                }
+            }
+        }
+
+        form {
+            position: relative;
+            z-index: 1;
+        }
+
+        .wrapper {
+            &:before,
+            &:after {
+                top: initial;
+                width: 40px;
+                background-position: bottom;
+            }
+
+            &:before {
+                left: -25px;
+                bottom: -7%;
+                margin-top: initial;
+            }
+
+            &:after {
+                right: -25px;
+                margin-bottom: 20%;
+            }
+        }
+
+        &-input {
+            height: 40px;
+            padding: 6px 12px;
+            font-size: 12px;
+        }
+
+        &-button {
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        .checkbox-wrapper label {
+            font-size: 10px;
+        }
+    }
+}

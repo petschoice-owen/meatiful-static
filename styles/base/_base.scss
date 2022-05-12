@@ -4,6 +4,17 @@
 // This file contains very basic styles.
 // -----------------------------------------------------------------------------
 
+::selection {
+    color: #fff;
+    background: #96302f;
+}
+
+::-moz-selection {
+    color: #fff;
+    background: #96302f;
+}
+
+
 /**
 * Basic styles for links
 */

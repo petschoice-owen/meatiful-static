@@ -142,6 +142,24 @@ var productTabs = () => {
     }  
 }
 
+// pop-up functions
+var popUp = () => {
+    if(typeof window.localStorage !== "undefined" && !localStorage.getItem('visited')) {
+        // Set visited flag in local storage
+        localStorage.setItem('visited', true);
+        // Alert the user
+        if ($("#pop_up").length) {
+            $("html").addClass("pop-up-show");
+            $("#pop_up").fadeIn();
+
+            $(".pop-up-close").click(function() {
+                $("html").removeClass("pop-up-show");
+                $(this).closest(".pop-up").fadeOut();
+            });
+        }   
+    }
+}
+
 // for preview purposes - stockists page
 var stockists = () => {
     if ($(".page-stockists").length) {
@@ -149,6 +167,9 @@ var stockists = () => {
             e.preventDefault();
             $("section.content .search-text").addClass("d-none");
             $("section.content .search-results").removeClass("d-none");
+            setTimeout(() => {
+                $(this).closest("form")[0].reset();
+            }, 100);
         });
     }
 }
@@ -171,5 +192,6 @@ $(window).resize(function() {
 window.onload = function() {
     masonry();
     stockists();
+    popUp();
 }
   
