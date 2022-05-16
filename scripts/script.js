@@ -1,3 +1,5 @@
+var $ = jQuery;
+
 // top-navigation function
 var windowScrolled = () => {
     function checkScroll() {

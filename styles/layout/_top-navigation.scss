@@ -60,8 +60,13 @@
         max-height: 76px;
     }
     
-    .nav-item {
+    .nav-item,
+    .menu-item {
         padding: 36px;
+
+        a {
+            display: block;
+        }
     }
   
     .navbar {
@@ -296,7 +301,8 @@
     // }
   
     @media (max-width: 1599px) {
-        .nav-item {
+        .nav-item,
+        .menu-item {
             padding: 36px 24px;
         }
     }
@@ -328,7 +334,8 @@
                 max-width: 100%;
             }
     
-            .nav-item {
+            .nav-item,
+            .menu-item {
                 padding: 11px;
             }
     
