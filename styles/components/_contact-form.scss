@@ -10,6 +10,11 @@
     color: $text-color;
     font-family: $font-gotham-book;
 
+    br,
+    p:empty {
+        display: none;
+    }
+
     .required-asterisk {
         color: #e42313;
     }

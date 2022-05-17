@@ -171,6 +171,15 @@ var popUp = () => {
     }
 }
 
+// contact form 7 adjustments
+var contactForm7 = () => {
+    if ($(".wpcf7-spinner").length) {
+        $(".wpcf7-spinner").each(function() {
+            $(this).remove();
+        });
+    }
+}
+
 // for preview purposes - stockists page
 var stockists = () => {
     if ($(".page-stockists").length) {
@@ -193,6 +202,7 @@ $(document).ready(function() {
     parallaxMargin();
     productQuantity();
     productTabs();
+    contactForm7();
 });
   
 $(window).resize(function() {
@@ -204,5 +214,6 @@ window.onload = function() {
     masonry();
     stockists();
     popUp();
+    contactForm7();
 }
   
