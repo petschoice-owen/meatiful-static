@@ -15,6 +15,18 @@
         display: none;
     }
 
+    .wpcf7-not-valid-tip {
+        margin-top: -18px;
+        font-size: 16px;
+    }
+    
+    .wpcf7-form .wpcf7-response-output {
+        margin: 0;
+        padding: 7px 10px;
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
     .required-asterisk {
         color: #e42313;
     }
@@ -37,6 +49,11 @@
 
         &-full {
             width: 100%;
+
+            .wpcf7-form-control-wrap {
+                display: flex;
+                flex-direction: column;
+            }
         }
 
         &-right {
@@ -138,12 +155,13 @@
             &:before {
                 content: "";
                 position: absolute;
-                top: 0;
+                top: 17px;
+                // top: 0;
                 right: 15px;
-                bottom: 0;
+                // bottom: 0;
                 width: 0;
                 height: 0;
-                margin: auto;
+                // margin: auto;
                 border-left: 10px solid transparent;
                 border-right: 10px solid transparent;
                 border-top: 10px solid $text-color;
@@ -183,6 +201,15 @@
     }
 
     @media (max-width: 991px) {
+        .wpcf7-not-valid-tip {
+            font-size: 14px;
+        }
+
+        .wpcf7-form .wpcf7-response-output {
+            font-size: 14px;
+            line-height: 1.2;
+        }
+
         .column {
             width: 100%;
             padding: 0;
@@ -197,6 +224,15 @@
     }
 
     @media (max-width: 767px) {
+        .wpcf7-not-valid-tip {
+            margin-top: -15px;
+            font-size: 12px;
+        }
+
+        .wpcf7-form .wpcf7-response-output {
+            font-size: 12px;
+        }
+
         .column {
             .label {
                 display: block;
