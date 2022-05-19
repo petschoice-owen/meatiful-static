@@ -5,6 +5,9 @@
 // -------------------------------------------------------------------------------------------
 
 .news.content {
+    background-repeat: repeat;
+    background-position: left top;
+    
     .masonry {
         padding: 30px;
     }
