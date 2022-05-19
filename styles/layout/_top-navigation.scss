@@ -199,7 +199,7 @@
         width: 260px;
         box-shadow: 0 2px 7px 0 rgba(0,0,0,.5);
     
-        .content {
+        .buy-online-content {
             display: flex;
             flex-direction: column;
             padding: 25px 25px 0;
@@ -267,38 +267,6 @@
             width: 100%;
         }
     }
-  
-    // &.scrolled {
-    //   .logo-image {
-    //     max-height: 50px;
-    //   }
-  
-    //   .logo-text {
-    //     font-size: 18px;
-    //   }
-  
-    //   .navbar {
-    //     padding: 5px;
-  
-    //     a {
-    //       font-size: 15px;
-    //     }
-  
-    //     .menu-dropdown {
-    //       &:hover ul {
-    //         top: 44px;
-    //       }
-  
-    //       ul {
-    //         top: 55px;
-            
-    //         a {
-    //           font-size: 12px;
-    //         }
-    //       }
-    //     }
-    //   }
-    // }
   
     @media (max-width: 1599px) {
         .nav-item,
@@ -415,7 +383,7 @@
         .buy-online {
             width: 155px;
     
-            .content {
+            .buy-online-content {
                 padding: 15px 15px 0;
             }
     
@@ -440,78 +408,11 @@
                 margin: 0 2px;
             }
         }
-    
-        // .navbar {
-        //   .navbar-nav {
-        //     a {
-        //       font-size: 16px;
-        //       letter-spacing: 0;
-        //     }
-    
-        //     .menu-dropdown {
-        //       ul {
-        //         top: 67px;
-        //       }
-    
-        //       &:hover ul {
-        //         top: 52px;
-        //       }
-        //     }
-        //   }
-        // }
     }
   
     @media (max-width: 767px) {
         .buy-online {
             display: none;
         }
-    
-        // .navbar {
-        //   .navbar-collapse {
-        //     position: absolute;
-        //     top: 58px;
-        //     left: 0;
-        //     width: 100%;
-        //     background: #fff;
-        //     border-top: 2px solid $brand-color;
-        //     border-bottom: 2px solid $brand-color;
-        //     pointer-events: none;
-        //     transition: .35s ease-in-out all;
-    
-        //     &.show {
-        //       pointer-events: all;
-        //     }
-        //   }
-    
-        //   .navbar-nav {
-        //     padding: 5px 15px;
-    
-        //     & > li:not(:first-child) {
-        //       margin-left: 0;
-        //     }
-    
-        //     .menu-dropdown:hover ul,
-        //     .menu-dropdown ul {
-        //       position: relative;
-        //       top: initial;
-        //       background: transparent;
-        //       opacity: 1;
-        //       box-shadow: none;
-    
-        //       a {
-        //         padding: 4px 20px;
-        //         color: $brand-color;
-        //         background-color: transparent;
-        //       }
-        //     }
-    
-        //     a {
-        //       &:before,
-        //       &:after {
-        //         display: none;
-        //       }
-        //     }
-        //   }
-        // }
     }
 }
