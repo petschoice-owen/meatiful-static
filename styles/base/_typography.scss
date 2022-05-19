@@ -105,3 +105,13 @@ p {
         }
     }
 }
+
+.text-shadow-white {
+    &-white {
+        text-shadow: 0 0 3px #fff;
+    }
+
+    &-black {
+        text-shadow: 0 0 3px #000;
+    }
+}
