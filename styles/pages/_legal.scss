@@ -134,6 +134,10 @@
             font-family: $font-gotham-bold;
         }
 
+        em, i {
+            font-style: italic;
+        }
+
         ul {
             list-style: disc;
         }
