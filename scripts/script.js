@@ -10,17 +10,17 @@ var windowScrolled = () => {
         }
     }
 
-    function checkWPadmin() {
-        if ($("#wpadminbar").length) {
-            var wpAdminBar = $("#wpadminbar").height();
+    // function checkWPadmin() {
+    //     if ($("#wpadminbar").length) {
+    //         var wpAdminBar = $("#wpadminbar").height();
 
-            $(".top-navigation").css("top",wpAdminBar+"px");
-        }
-    }
+    //         $(".top-navigation").css("top",wpAdminBar+"px");
+    //     }
+    // }
 
     $(document).ready(function() {
         checkScroll();
-        checkWPadmin();
+        // checkWPadmin();
         $(window).scroll(checkScroll);
     });
 }
