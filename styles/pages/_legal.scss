@@ -46,7 +46,14 @@
             }
 
             *:not(:last-child) {
-                margin-bottom: 20px;
+                // margin-bottom: 20px;
+                margin-bottom: 10px;
+            }
+
+            ul, ol {    
+                li:not(:last-child) {
+                    margin-bottom: 0;
+                }
             }
 
             * + h1, * + h2, * + h3, * + h4, * + h5, * + h6 {
@@ -129,6 +136,10 @@
 
         ul {
             list-style: disc;
+        }
+
+        ol {
+            list-style: decimal;
         }
 
         ul, ol {
@@ -216,7 +227,8 @@
                 font-size: 14px;
 
                 *:not(:last-child) {
-                    margin-bottom: 15px;
+                    // margin-bottom: 15px;
+                    margin-bottom: 5px;
                 }
 
                 * + h1, * + h2, * + h3, * + h4, * + h5, * + h6 {
