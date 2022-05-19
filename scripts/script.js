@@ -153,6 +153,29 @@ var productTabs = () => {
     }  
 }
 
+// product page - hover title function
+var productWooCommerce = () => {
+    if ($(".single-product .woocommerce-product-gallery__image img").length) {
+        var productImage = $(".single-product .woocommerce-product-gallery__image img");
+
+        // auto add image title
+        productImage.each(function() {
+            var productTitle = $(this).attr("alt");
+            $(this).attr("title", productTitle);
+        });
+
+        // change preview image when clicking on product thumbnails
+        productImage.each(function() {
+            $(this).click(function() {
+                var selectedProduct = $(this).attr("src");
+                setTimeout(() => {
+                    $(".woocommerce-product-gallery__image:first-child img").attr("src", selectedProduct);
+                }, 100);
+            })
+        });        
+    }
+}
+
 // pop-up functions
 var popUp = () => {
     if(typeof window.localStorage !== "undefined" && !localStorage.getItem('visited')) {
@@ -215,5 +238,6 @@ window.onload = function() {
     stockists();
     popUp();
     contactForm7();
+    productWooCommerce();
 }
   
