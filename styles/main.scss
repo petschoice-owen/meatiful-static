@@ -36,6 +36,7 @@
 
 // 6. Page-specific styles
 @import
+    'pages/page-default',
     'pages/home',
     'pages/values',
     'pages/legal',
@@ -45,4 +46,5 @@
     'pages/product',
     'pages/single-news',
     'pages/stockists',
-    'pages/404';
+    'pages/404',
+    'pages/cookie-policy';

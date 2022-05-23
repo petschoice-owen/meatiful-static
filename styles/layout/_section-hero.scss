@@ -192,3 +192,46 @@
         }
     }
 }
+
+.hero-default {
+    position: relative;
+    padding: 120px 0;
+
+    .hero-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+    }
+
+    @media (max-width: 1399px) {
+        padding: 100px 0;
+    }
+
+    @media (max-width: 1199px) {
+        padding: 80px 0;
+
+        .heading.dashed {
+            margin-bottom: 0;
+        }
+    }
+
+    @media (max-width: 991px) {
+        padding: 60px 0;
+
+        .wrapper {
+            max-width: 550px;
+        }
+    }
+    
+    @media (max-width: 767px) {
+        &-background {
+            display: none;
+        }
+    }
+}
