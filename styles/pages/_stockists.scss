@@ -248,6 +248,10 @@
     }
 
     .search-results {
+        .items {
+            padding: 0;
+        }
+        
         .item {
             position: relative;
             display: flex;
@@ -292,12 +296,34 @@
             padding: 0 50px 0 20px;
         }
 
+        .information {
+            padding: 0 50px 0 15px;
+        }
+
         .name {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             text-transform: uppercase;
         }
 
+        .map {
+            display: flex;
+            width: fit-content;
+            margin-top: 10px;
+            line-height: 1.4;
+            font-size: 18px;
+            color: #96302F;
+            text-decoration: none;
+            outline: none;
+
+            &:hover {
+                color: #96302F;
+                text-decoration: underline;
+            }
+        }
+
         .contact {
+            display: flex;
+            flex-direction: column;
             padding: 0 25px 0 50px;
             margin-left: auto;
             border-left: 1px dashed #999;
@@ -314,6 +340,23 @@
             &:hover {
                 color: #96302F;
                 text-decoration: none;
+            }
+        }
+
+        .email, .web-address {
+            display: flex;
+            width: fit-content;
+            margin-top: 5px;
+            font-family: $font-gotham-book;
+            line-height: 1.4;
+            font-size: 16px;
+            color: #96302F;
+            text-decoration: none;
+            outline: none;
+
+            &:hover {
+                color: #96302F;
+                text-decoration: underline;
             }
         }
     }
@@ -367,8 +410,12 @@
                 padding-right: 40px;
             }
 
+            .information {
+                padding: 0 25px 0 5px;
+            }
+
             .contact {
-                padding: 0 15px 0 40px;
+                padding: 0 25px 0 40px;
             }
         }
     }
@@ -440,6 +487,10 @@
             .number {
                 font-size: 24px;
             }
+
+            .map, .email, .web-address {
+                font-size: 14px;
+            }
         }
     }
 
@@ -474,8 +525,29 @@
             }
 
             .name {
-                margin-bottom: 15px;
+                margin-bottom: 10px;
                 line-height: 1.2;
+            }
+
+            .map {
+                margin-bottom: 15px;
+            }
+
+            .information {
+                padding-left: 0;
+
+                & + .contact {
+                    align-items: flex-start;
+                    padding-top: 15px;
+    
+                    .number, .email, .web-address {
+                        line-height: 1.2;
+                    }
+
+                    .number {
+                        font-size: 20px;
+                    }
+                }
             }
 
             .contact {

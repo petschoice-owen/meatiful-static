@@ -206,13 +206,47 @@ var contactForm7 = () => {
 // for preview purposes - stockists page
 var stockists = () => {
     if ($(".page-stockists").length) {
-        $(".search-form .btn-search").click(function(e) {
+        // $(".search-form .btn-search").click(function(e) {
+        //     e.preventDefault();
+        //     $("section.content .search-text").addClass("d-none");
+        //     $("section.content .search-results").removeClass("d-none");
+        //     setTimeout(() => {
+        //         $(this).closest("form")[0].reset();
+        //     }, 100);
+        // });
+
+        $("#search_input").on('keyup', function() {
+            var input, filter, ul, li, span, i, txtValue;
+            input = document.getElementById("search_input");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("search_results_items");
+            li = ul.getElementsByTagName("li");
+    
+            for (i = 0; i < li.length; i++) {
+                span = li[i].getElementsByTagName("span")[0];
+                txtValue = span.textContent || span.innerText;
+    
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        });
+
+        $("#search_results_items .contact .number").each(function(){
+            var formatNumber = $(this).text().replace(/\s/g, '').replace(/[^a-zA-Z0-9]/g, '');
+            $(this).attr("href","tel:"+formatNumber);
+        });
+
+        $(document).keypress(function(event) {
+            if (event.which == '13') {
+                event.preventDefault();
+            }
+        });
+
+        $("#search_stockist").on('click', function(e) {
             e.preventDefault();
-            $("section.content .search-text").addClass("d-none");
-            $("section.content .search-results").removeClass("d-none");
-            setTimeout(() => {
-                $(this).closest("form")[0].reset();
-            }, 100);
         });
     }
 }
