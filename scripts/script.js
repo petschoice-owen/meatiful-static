@@ -232,6 +232,31 @@ var stockists = () => {
                     li[i].style.display = "none";
                 }
             }
+
+            if ($(this).val()) {
+                $("#search_text").css("display","none");
+                $("#search_results").removeClass("d-none").css("display", "block");
+
+                if ($("#search_results_items .item").length === $("#search_results_items .item[style='display: none;']").length ) {
+                    $("#search_results").css("display","none");
+                    $("#search_results_none").removeClass("d-none").css("display", "block");
+                }
+
+                else {
+                    $("#search_results_none").css("display","none");
+                    $("#search_results").removeClass("d-none").css("display", "block");
+                }
+            }
+
+            else {
+                $("#search_results").css("display","none");
+                $("#search_results_none").css("display","none");
+                $("#search_text").css("display", "block");
+
+                if ($(this).val() == "") {
+                    $("#search_results").css("display","none");
+                }
+            }
         });
 
         $("#search_results_items .contact .number").each(function(){

@@ -77,9 +77,10 @@
                 <div class="wrapper-search">
                     <form action="" id="" class="search-form">
                         <div class="form-group">
-                            <input type="text" class="postcode" placeholder="Enter your postcode or town" name="destination" id="destination" value="">
-                            <div class="button-holder">
-                                <input type="submit" value="" class="btn-search">
+                            <input type="text" class="postcode postcode-full" id="search_input" placeholder="Enter postcode or town" name="destination" value="">
+                            <div class="button-holder d-none">
+                                <!-- <input type="text" id="search_stockist" value="" class="btn-search"> -->
+                                <a href="#search_input" id="search_stockist" class="btn-search"></a>
                             </div>
                         </div>
                     </form>
@@ -88,86 +89,218 @@
         </section>
         <section class="content" style="background-image: url(assets/images/bg-film.jpg);">
             <div class="container">
-                <div class="search-text d-none">
+                <div class="search-text" id="search_text">
                     <div class="text-content">
                         <p><strong>Enter your location to find stockists in your area</strong></p>
                     </div>
                 </div>
-                <div class="search-results">
-                    <div class="items">
-                        <div class="item">
+                <div class="search-results d-none" id="search_results">
+                    <ul class="items" id="search_results_items">
+                        <li class="item">
+                            <span class="title d-none">K9 Petshop Cannock WS11 6LB</span>
                             <div class="information">
-                                <h3 class="name">Sainsburys - Livingston</h3>
+                                <h3 class="name">K9 Petshop</h3>
                                 <p class="address">
-                                    Unit 1, Almondvale Retail Park,<br />
-                                    Livingston,<br />
-                                    EH54 6RQ
-                                </p>
-                                <a href="#" class="map" target="_blank">View in Google Map</a>
+                                    119 Hednesford Road, <br>
+                                    Cannock, Staffordshire,<br>
+                                    WS11 6LB</p>
+                                <a href="https://www.google.com/maps/search/52.6912969911391,+-2.0226345703044855" class="map" target="_blank">View in Google Map</a>
                             </div>
                             <div class="contact">
-                                <a href="tel:01506413699" class="number">01506 413699</a>
-                                <a href="mailto:asd@asd.asd" class="email">email@address.com</a>
-                                <a href="asd@asd.asd" class="web-address">web@address.com</a>
+                                <a href="tel:01543897373" class="number">01543897373</a>
+                                <a href="mailto:info@k9-petshop.co.uk" class="email">info@k9-petshop.co.uk</a>
+                                <a href="www.9-petshop.co.uk" class="web-address">www.9-petshop.co.uk</a>
                             </div>
-                        </div>
-                        <div class="item">
-                            <p class="distance">35m</p>
-                            <div class="info">
-                                <h3 class="name">Paws and Claws</h3>
+                        </li>
+                        <li class="item">
+                            <span class="title d-none">Purdy’s Pet Shop Radford CV6 3EN</span>
+                            <div class="information">
+                                <h3 class="name">Purdy’s Pet Shop</h3>
                                 <p class="address">
-                                    Lothian Road,<br />
-                                    Jedburgh,<br />
-                                    Roxburghshire,<br />
-                                    TD8 6LA
-                                </p>
+                                    183 Cheveral Avenue, <br>
+                                    Radford, Coventry,<br>
+                                    CV6 3EN</p>
+                                <a href="https://www.google.com/maps/search/52.4257893828215,+-1.5188061066376841" class="map" target="_blank">View in Google Map</a>
                             </div>
                             <div class="contact">
-                                <a href="tel:01835862633" class="number">01835 862633</a>
+                                <a href="tel:02476595117" class="number">0247 6595117</a>
                             </div>
-                        </div>
-                        <div class="item">
-                            <p class="distance">37m</p>
-                            <div class="info">
-                                <h3 class="name">Sainsburys - Hamilton</h3>
+                        </li>
+                        <li class="item">
+                            <span class="title d-none">Sainsburys – Peterborough Peterborough PE1 5NG</span>
+                            <div class="information">
+                                <h3 class="name">Sainsburys – Peterborough</h3>
                                 <p class="address">
-                                    5 Douglas Park Lane,<br />
-                                    Hamilton,<br />
-                                    ML3 0DF
-                                </p>
+                                    112 Oxney Road, <br>
+                                    Peterborough, <br>
+                                    PE1 5NG</p>
+                                <a href="https://www.google.com/maps/search/52.58765420664758,+-0.21273892851233803" class="map" target="_blank">View in Google Map</a>
                             </div>
                             <div class="contact">
-                                <a href="tel:01698424665" class="number">01698 424665</a>
+                                <a href="tel:01733897766" class="number">01733 897766</a>
                             </div>
-                        </div>
-                        <div class="item">
-                            <p class="distance">38m</p>
-                            <div class="info">
-                                <h3 class="name">Sainsburys - Edinburgh Longstone</h3>
+                        </li>
+                        <li class="item">
+                            <span class="title d-none">Sainsburys – Pepper Hill Gravesend DA11 8JH</span>
+                            <div class="information">
+                                <h3 class="name">Sainsburys – Pepper Hill</h3>
                                 <p class="address">
-                                    Inglis Green Road,<br />
-                                    Edinburgh,<br />
-                                    EH14 2ER
-                                </p>
+                                    Wingfield Bank, Northfleet,<br>
+                                    Gravesend, <br>
+                                    DA11 8JH</p>
+                                <a href="https://www.google.com/maps/search/51.43028730574371,+0.3325724940310944" class="map" target="_blank">View in Google Map</a>
                             </div>
                             <div class="contact">
-                                <a href="tel:01315286200" class="number">0131 5286200</a>
+                                <a href="tel:01474569318" class="number">01474 569318</a>
                             </div>
-                        </div>                        
-                        <div class="item">
-                            <p class="distance">41m</p>
-                            <div class="info">
-                                <h3 class="name">Sainsburys - Blackhall</h3>
+                        </li>
+                        <li class="item">
+                            <span class="title d-none">Jollyes – Banbridge Banbridge BT32 4AX</span>
+                            <div class="information">
+                                <h3 class="name">Jollyes – Banbridge</h3>
                                 <p class="address">
-                                    185 Craigleith Road,<br />
-                                    Edinburgh,<br />
-                                    EH4 2EB
-                                </p>
+                                    25 Castlewellan Road, <br>
+                                    Banbridge, County Down,<br>
+                                    BT32 4AX</p>
+                                <a href="https://www.google.com/maps/search/54.34858301306861,+-6.265471911392291" class="map" target="_blank">View in Google Map</a>
                             </div>
                             <div class="contact">
-                                <a href="tel:01313320704" class="number">0131 332 0704</a>
+                                <a href="tel:02840626748" class="number">028 40626748</a>
+                                <a href="mailto:banbridge@jollyes.co.uk" class="email">banbridge@jollyes.co.uk</a>
                             </div>
-                        </div>
+                        </li>
+                        <li class="item">
+                            <span class="title d-none">Jollyes – Newcastle Newcastle-upon-Tyne NE5 2NF</span>
+                            <div class="information">
+                                <h3 class="name">Jollyes – Newcastle</h3>
+                                <p class="address">
+                                    West Denton Retail Park, West Denton Way,<br>
+                                    Newcastle-upon-Tyne, Tyne and Wear,<br>
+                                    NE5 2NF</p>
+                                <a href="https://www.google.com/maps/search/54.994875642329866,+-1.682955427106876" class="map" target="_blank">View in Google Map</a>
+                            </div>
+                            <div class="contact">
+                                <a href="tel:01912867589" class="number">01912867589</a>
+                                <a href="mailto:newcastle@jollyes.co.uk" class="email">newcastle@jollyes.co.uk</a>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <span class="title d-none">Just For Pets (Telford) Ketley TF1 5DS</span>
+                            <div class="information">
+                                <h3 class="name">Just For Pets (Telford)</h3>
+                                <p class="address">
+                                    Telford Store, Unit 2 Holyhead Road,<br>
+                                    Ketley, <br>
+                                    TF1 5DS</p>
+                                <a href="https://www.google.com/maps/search/52.69475168768331,+-2.469878859006715" class="map" target="_blank">View in Google Map</a>
+                            </div>
+                            <div class="contact">
+                                <a href="tel:01952615154" class="number">01952 615154</a>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <span class="title d-none">Just for Pets (Long Eaton) Long Eaton  NG10 1HD</span>
+                            <div class="information">
+                                <h3 class="name">Just for Pets (Long Eaton)</h3>
+                                <p class="address">
+                                    Long Eaton Store, Unit 2 Cross Street Retail Park,<br>
+                                    Long Eaton,<br>
+                                    NG10 1HD</p>
+                                <a href="https://www.google.com/maps/search/52.89767718366601,+-1.2695975915673852" class="map" target="_blank">View in Google Map</a>
+                            </div>
+                            <div class="contact">
+                                <a href="tel:01159463977" class="number">0115 946 3977</a>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <span class="title d-none">All 4 Pawz  TA6 5HS</span>
+                            <div class="information">
+                                <h3 class="name">All 4 Pawz</h3>
+                                <p class="address">
+                                    10-12 St Johns Street, Bridgwater,<br>
+                                    Somerset,<br>
+                                    TA6 5HS</p>
+                                <a href="https://www.google.com/maps/search/51.12894623304604,+-2.9967925933210964" class="map" target="_blank">View in Google Map</a>
+                            </div>
+                            <div class="contact">
+                                <a href="tel:01278238182" class="number">01278 238182</a>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <span class="title d-none">Pet Stop Launceston PL15 8EX</span>
+                            <div class="information">
+                                <h3 class="name">Pet Stop</h3>
+                                <p class="address">
+                                    Unit 14 Newport Ind Estate, <br>
+                                    Launceston, Cornwall,<br>
+                                    PL15 8EX</p>
+                                <a href="https://www.google.com/maps/search/50.63996430527515,+-4.361035049524198" class="map" target="_blank">View in Google Map</a>
+                            </div>
+                            <div class="contact">
+                                <a href="tel:01566776670" class="number">01566 776670</a>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <span class="title d-none">Pet Station Rotherham S62 6JE</span>
+                            <div class="information">
+                                <h3 class="name">Pet Station</h3>
+                                <p class="address">
+                                    17 Alexandra Centre, Railmill Way, Parkgate,<br>
+                                    Rotherham, South Yorkshire,<br>
+                                    S62 6JE</p>
+                                <a href="https://www.google.com/maps/search/53.447922855266604,+-1.3428689182722733" class="map" target="_blank">View in Google Map</a>
+                            </div>
+                            <div class="contact">
+                                <a href="tel:01709780600" class="number">01709 780600</a>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <span class="title d-none">All Pets (Stonehouse) Gloucester GL10 2NP</span>
+                            <div class="information">
+                                <h3 class="name">All Pets (Stonehouse)</h3>
+                                <p class="address">
+                                    3-5 Elm Road, Stonehouse,<br>
+                                    Gloucester, Gloucestershire,<br>
+                                    GL10 2NP</p>
+                                <a href="https://www.google.com/maps/search/51.7484605894033,+-2.284669904778764" class="map" target="_blank">View in Google Map</a>
+                            </div>
+                            <div class="contact">
+                                <a href="tel:01453824724" class="number">01453 824724</a>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <span class="title d-none">The Feed Warehouse Ltd Consett DH8 7JU</span>
+                            <div class="information">
+                                <h3 class="name">The Feed Warehouse Ltd</h3>
+                                <p class="address">
+                                    Forster Street, Delves Lane,<br>
+                                    Consett, County Durham,<br>
+                                    DH8 7JU</p>
+                                <a href="https://www.google.com/maps/search/54.8489290539154,+-1.827665800013922" class="map" target="_blank">View in Google Map</a>
+                            </div>
+                            <div class="contact">
+                                <a href="tel:01207500097" class="number">01207 500097</a>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <span class="title d-none">Baileys DIY Ltd Abergavenny NP77RB</span>
+                            <div class="information">
+                                <h3 class="name">Baileys DIY Ltd</h3>
+                                <p class="address">
+                                    Brecon Road,<br>
+                                    Abergavenny, Monmouthshire,<br>
+                                    NP77RB</p>
+                                <a href="https://www.google.com/maps/search/51.824938170602,+-3.028885515466" class="map" target="_blank">View in Google Map</a>
+                            </div>
+                            <div class="contact">
+                                <a href="tel:01873853433" class="number">01873 853433</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search-text search-results-none d-none" id="search_results_none">
+                    <div class="text-content">
+                        <p><strong>Sorry, please try a different postcode or town.</strong></p>
                     </div>
                 </div>
             </div>
