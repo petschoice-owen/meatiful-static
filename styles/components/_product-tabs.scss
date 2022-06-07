@@ -214,6 +214,10 @@
             h1, h2, h3, h4, h5, h6 {
                 font-family: $font-gotham-bold;
             }
+
+            *:empty {
+                height: 24px;
+            }
         }
 
         .text-image {
@@ -307,6 +311,10 @@
 
             th, td {
                 min-width: 104px;
+            }
+
+            .text-content *:empty {
+                height: 15px;
             }
 
             table.table {
