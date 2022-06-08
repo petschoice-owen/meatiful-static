@@ -150,7 +150,6 @@ var productTabs = () => {
                     }
         
                     var tabTitleMobile = $(this).text();
-                    console.log(tabTitleMobile);
         
                     $(".product-tabs .nav-item").each(function() {
                         var navTab = $(this).find("button");
