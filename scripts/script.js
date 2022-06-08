@@ -50,11 +50,43 @@ var customSlider = () => {
 var parallaxMargin = () => {
     var topNavHeight = $(".top-navigation").height();
   
-    if ($(".page-home").length) {    
-        var heroHeight = $(".hero").outerHeight();
-        var autoHeight = topNavHeight + heroHeight - 5;
+    if ($(".page-home").length) {
+        // var heroHeight = $(".hero").outerHeight();
+        // var autoHeight = topNavHeight + heroHeight - 5;
 
-        $(".page-home").css("margin-top", autoHeight+"px");
+        // $(".page-home").css("margin-top", autoHeight+"px");
+
+        if ($("body").hasClass("admin-bar")) {
+            var heroHeight = $(".hero").outerHeight();
+            var topNavHeightAdjusted = $(".top-navigation").offset().top;
+            var autoHeight = topNavHeightAdjusted + heroHeight - 5;
+
+            if ($(window).width() < 783) {
+                if ($(window).width() < 768) {
+                    var autoHeightMobile = topNavHeightAdjusted + heroHeight - 40;
+    
+                    $(".page-home").css("margin-top", autoHeightMobile+"px");
+                }
+
+                else {
+                    var autoHeightTab = topNavHeightAdjusted + heroHeight - 20;
+    
+                    $(".page-home").css("margin-top", autoHeightTab+"px");
+                }
+            }
+
+            else {
+                $(".page-home").css("margin-top", autoHeight+"px");
+                console.log("else");
+            }
+        }
+
+        else {
+            var heroHeight = $(".hero").outerHeight();
+            var autoHeight = topNavHeight + heroHeight - 5;
+
+            $(".page-home").css("margin-top", autoHeight+"px");
+        }
     }
   
     else {
@@ -345,7 +377,7 @@ window.onload = function() {
     popUp();
     contactForm7();
     productWooCommerce();
-    removeDefaultOption();
+    // removeDefaultOption();
     productCustomPriceDefault();
     productCustomPriceDropdown();
     productForm();

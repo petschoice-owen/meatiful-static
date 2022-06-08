@@ -416,3 +416,31 @@
         }
     }
 }
+
+.admin-bar .top-navigation {
+    top: 32px;
+
+    .buy-online {
+        top: 32px;
+    }
+
+    @media (max-width: 1439px) {
+        .buy-online {
+            top: 143px;
+        }
+    }
+
+    @media (max-width: 1199px) {
+        .buy-online {
+            top: 100px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        top: 46px;
+
+        &.scrolled {
+            top: 0;
+        }
+    }
+}
