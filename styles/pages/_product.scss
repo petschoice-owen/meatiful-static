@@ -105,6 +105,11 @@
         }
     }
 
+    .variations_form {
+        opacity: 0;
+        transition: .3s ease-in-out all;
+    }
+
     .content-description {
         padding-left: 25px;  
 
@@ -141,6 +146,10 @@
             }
         }
 
+        .short-description.woocommerce-product-details__short-description + .price {
+            display: none !important;
+        }
+
         .price {
             display: flex;
             margin-top: 30px;
@@ -149,9 +158,10 @@
             color: #96302f;
         }
 
-        .size, .quantity {
+        .size, .quantity, .variations.quantity {
             display: flex;
             margin-top: 20px;
+            float: none;
         }
 
         .options {
@@ -196,10 +206,16 @@
             }
         }
 
+        .variations .value select,
         select {
+            display: flex;
+            max-width: initial;
+            min-width: initial;
+            margin: initial;
             padding: 8px 40px 8px 16px;
             height: 40px;
             font-size: 16px;
+            line-height: 23px;
             color: $text-color;
             border: 1px solid rgba(0,0,0,.09);
             outline: none;
@@ -234,6 +250,7 @@
             }
 
             .qty-btn {
+                position: relative;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -247,10 +264,48 @@
 
             .decrement-btn {
                 border-right: 0;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    width: 12px;
+                    height: 2px;
+                    margin: auto;
+                    background-color: $text-color;
+                }
             }
 
             .increment-btn {
                 border-left: 0;
+
+                &:before,
+                &:after {
+                    content: "";
+                    position: absolute;
+                    width: 12px;
+                    height: 2px;
+                    margin: auto;
+                    background-color: $text-color;
+                }
+
+                &:before {
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                }
+
+                &:after {
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    transform: rotate(90deg);
+                }
             }
         }
         
@@ -267,6 +322,7 @@
                 right: 0;
                 bottom: 0;
                 left: 0;
+                z-index: 1;
                 margin: 5px;
                 border: 2px solid #fff;
                 border-radius: 10px;

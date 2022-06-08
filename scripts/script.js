@@ -71,7 +71,16 @@ var masonry = () => {
         });
     }  
 }
-  
+
+// product form show on load
+var productForm = () => {
+    setTimeout(() => {
+        if ($(".variations_form").length) {
+            $(".variations_form").css("opacity","1");
+        }
+    }, 100);
+}
+
 // product quantity function
 var productQuantity = () => {
     if ($(".qty-input").length) {
@@ -84,6 +93,10 @@ var productQuantity = () => {
             if (value < 99) {
                 value++;
                 $(this).closest('.product-quantity').find('.qty-input').val(value);
+
+                var newQuantity = $("#qty_display").val();
+
+                $(".variation-quantity .quantity .input-text.qty.text").val(newQuantity);
             }
         });
         
@@ -96,6 +109,10 @@ var productQuantity = () => {
             if (value > 1) {
                 value--;
                 $(this).closest('.product-quantity').find('.qty-input').val(value);
+
+                var newQuantity = $("#qty_display").val();
+
+                $(".variation-quantity .quantity .input-text.qty.text").val(newQuantity);
             }
         });
     }
@@ -151,6 +168,37 @@ var productTabs = () => {
             });
         }
     }  
+}
+
+// product custom price function - default
+var productCustomPriceDefault = () => {
+    setTimeout(() => {
+        if ($("#woocommerce_variation_price").length) {
+            var defaultPrice = $("#woocommerce_variation_price").text();
+            $("#meatiful_custom_price").text(defaultPrice);
+        }
+    }, 100);
+}
+// product custom price function - on size change - dropdown
+var productCustomPriceDropdown = () => {
+    setTimeout(() => {
+        if ($("#woocommerce_variation_price").length) {
+            $(".variations_form.cart #size").on("change", function() {
+                productCustomPriceDefault();
+            });
+        }
+    }, 100);
+}
+
+// product option remove option - "Choose an option"
+var removeDefaultOption = () => {
+    if ($(".variations_form.cart #size option").length) {
+        $(".variations_form.cart #size option").each(function() {
+            if ($(this).val() == "") {
+                $(this).remove();
+            }
+        });
+    }
 }
 
 // product page - hover title function
@@ -298,5 +346,9 @@ window.onload = function() {
     popUp();
     contactForm7();
     productWooCommerce();
+    removeDefaultOption();
+    productCustomPriceDefault();
+    productCustomPriceDropdown();
+    productForm();
 }
   
