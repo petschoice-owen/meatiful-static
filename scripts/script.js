@@ -206,7 +206,10 @@ var productCustomPriceDefault = () => {
     setTimeout(() => {
         if ($("#woocommerce_variation_price").length) {
             var defaultPrice = $("#woocommerce_variation_price").text();
-            $("#meatiful_custom_price").text(defaultPrice);
+
+            if (!defaultPrice == "") {                
+                $("#meatiful_custom_price").text(defaultPrice);
+            }
         }
     }, 100);
 }

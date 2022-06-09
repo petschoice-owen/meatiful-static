@@ -110,6 +110,16 @@
         transition: .3s ease-in-out all;
     }
 
+    .has-default-attributes {
+        .short-description.woocommerce-product-details__short-description + .price {
+            display: none !important;
+        }
+    }
+
+    #meatiful_custom_price:empty {
+        display: none;
+    }
+
     .content-description {
         padding-left: 25px;  
 
@@ -144,10 +154,6 @@
             & > * + * {
                 margin-top: 5px;
             }
-        }
-
-        .short-description.woocommerce-product-details__short-description + .price {
-            display: none !important;
         }
 
         .price {
@@ -412,6 +418,16 @@
         .content-column {
             max-width: 100%;
             padding: 0;
+
+            &.summary {
+                width: 100%;
+                float: none;
+                margin-bottom: 0;
+
+                .variations_form.cart {
+                    margin-bottom: 0;
+                }
+            }
         }
 
         .content-image {

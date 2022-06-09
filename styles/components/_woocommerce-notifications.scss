@@ -1,0 +1,75 @@
+//main: ../main.scss
+
+// ----------------------------------------------------------------------------------
+// This file contains all styles related to the woocommerece notifications component.
+// ----------------------------------------------------------------------------------
+
+.woocommerce-message {
+    font-size: 16px;
+    color: #222;
+    border-top-color: #96302f;
+
+    &:before {
+        color: #96302f;
+    }
+}
+
+.single-product {
+    .woocommerce-message {
+        display: flex;
+        padding: 1.5em 2em 1.5em 3.5em;
+
+        &::before {
+            top: 0;
+            bottom: 0;
+            height: 24px;
+            margin: auto;
+        }
+
+        .button {
+            position: absolute;
+            top: 0;
+            right: 2em;
+            bottom: 0;
+            float: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 36px;
+            margin: auto;
+            padding: 5px 15px;
+            font-weight: 900;
+            font-size: 14px;
+            color: #fff;
+            text-transform: uppercase;
+            background-color: #96302f;
+
+            &:hover {
+                color: #fff;
+                background-color: #000;
+            }
+        }
+
+        @media (max-width: 991px) {
+            padding-right: 10.5em;
+        }
+
+        @media (max-width: 767px) {
+            padding-right: 8.5em;
+            padding-left: 3em;
+            font-size: 14px;
+
+            .button {
+                height: 30px;
+                margin: auto;
+                padding: 5px 10px;
+                font-size: 10px;
+            }
+
+            &::before {
+                left: 1.2em;
+                height: 20px;
+            }
+        }
+    }
+}
