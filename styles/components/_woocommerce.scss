@@ -1,0 +1,349 @@
+//main: ../main.scss
+
+// ----------------------------------------------------------------------------------
+// This file contains all styles related to the woocommerece notifications component.
+// ----------------------------------------------------------------------------------
+
+.woocommerce-message,
+.woocommerce-info {
+    font-size: 16px;
+    color: #222;
+    border-top-color: #96302f;
+
+    &::before {
+        color: #96302f;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 14px;
+    }
+}
+
+.woocommerce {
+    .return-to-shop {
+        .button {
+            padding: 15px 20px;
+            font-weight: 900;
+            font-size: 16px;
+            color: #fff;
+            text-transform: uppercase;
+            background-color: #96302f;
+    
+            &:hover {
+                color: #fff;
+                background-color: #000;
+            }
+    
+            @media (max-width: 991px) {
+                font-size: 14px;
+            }
+    
+            @media (max-width: 767px) {
+                padding: 12px 15px;
+                font-size: 12px;
+            }
+        }
+    }
+
+    form {
+        .remove {
+            color: #8d8d8d !important;
+    
+            @include on-event() {
+               color: red !important;
+               background-color: transparent;
+            }
+        }
+
+        .product-thumbnail img {
+            width: 50px;
+        }
+
+        .product-quantity input {
+            border: 1px solid #ccc;
+
+            &:focus-visible, &:focus-within, &:focus {
+                outline: none;
+            }
+        }
+
+        .cart_item {
+            @media (max-width: 767px) {
+                position: relative;
+                
+                td::before {
+                    margin-right: 5px;
+                }
+
+                .product-thumbnail {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    display: block;
+                    background: transparent !important;
+                    border: 0;
+
+                    &::before {
+                        display: none;
+                    }
+
+                    img {
+                        width: auto;
+                        height: 28px;
+                    }
+                }
+            }
+        }
+    }
+
+    .shop_table, .cart_totals {
+        font-size: 16px;
+
+        @media (max-width: 767px) {
+            font-size: 14px;
+        }
+    }
+
+    .shop_table tbody tr:last-child td .button {
+        margin-bottom: 0;
+        padding: 15px 20px;
+        font-weight: 900;
+        font-size: 16px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: #96302f;
+    
+        &:hover {
+            color: #fff;
+            background-color: #000;
+        }
+
+        &:disabled:hover {
+            color: #fff;
+            background-color: #96302f;
+        }
+
+        @media (max-width: 991px) {
+            font-size: 14px;
+        }
+
+        @media (max-width: 767px) {
+            padding: 12px 15px;
+            font-size: 12px;
+        }
+    }
+
+    .cart_totals .wc-proceed-to-checkout a {
+        padding: 20px 15px;
+        font-weight: 900;
+        font-size: 18px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: #96302f;
+
+        &:hover {
+            color: #fff;
+            background-color: #000;
+        }
+
+        @media (max-width: 991px) {
+            padding: 15px 10px;
+            font-size: 16px;
+        }
+
+        @media (max-width: 767px) {
+            font-size: 16px;
+        }
+
+        @media (max-width: 575px) {
+            font-size: 13px;
+        }
+    }
+
+    .order-total {
+        font-size: 20px;
+
+        @media (max-width: 991px) {
+            font-size: 18px;
+        }
+    }
+}
+
+.woocommerce-checkout {
+    h3 {
+        font-weight: 900;
+        font-size: 20px;
+        color: #222;
+    }
+
+    label {
+        font-size: 16px;
+        color: #222;
+    }
+
+    .form-row-first,
+    .form-row-last {
+        @media (max-width: 991px) {
+            width: 100% !important;
+        }
+    }
+
+    .woocommerce-validated input {
+        border-color: #ccc !important;
+    }
+
+    .woocommerce-validated input:focus {
+        border-color: #8d8d8d !important;
+    }
+
+    .woocommerce-input-wrapper {
+        input {
+            height: 40px;
+            padding: 5px 10px;
+            font-size: 15px;
+            border: 1px solid #ccc;
+        }
+
+        textarea {
+            padding: 5px 10px;
+            font-size: 15px;
+            border: 1px solid #ccc;
+        }
+
+        #order_comments {
+            height: 60px !important;
+        }
+
+        .select2 .selection .select2-selection {
+            height: 40px;
+            border-radius: 0;
+            border: 1px solid #ccc;
+
+            .select2-selection__rendered {
+                line-height: 38px;
+            }
+
+            .select2-selection__arrow {
+                top: 0;
+                right: 5px;
+                bottom: 0;
+                margin: auto;
+            }
+        }
+    }
+
+    .select2-search__field {
+        padding: 5px 10px;
+        font-size: 16px;
+        color: #222;
+    }
+
+    .select2-results__option {
+        font-size: 16px;
+        color: #222;
+
+        &--highlighted[data-selected] {
+            background-color: #96302f !important;
+        }
+    }
+
+    .payment_methods .woocommerce-notice, 
+    .woocommerce-form__label-for-checkbox,
+    .woocommerce-privacy-policy-text {
+        font-size: 15px !important;
+        line-height: 1.6 !important;
+
+        @media (max-width: 991px) {
+            font-size: 15px !important;
+            line-height: 1.6 !important;
+        }
+
+        @media (max-width: 767px) {
+            font-size: 14px !important;
+        }
+    }
+
+    .woocommerce-form__label-for-checkbox input {
+        height: auto;
+    }
+
+    #place_order {
+        padding: 15px 20px;
+        font-weight: 900;
+        font-size: 16px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: #96302f;
+
+        &:hover {
+            color: #fff;
+            background-color: #000;
+        }
+
+        @media (max-width: 767px) {
+            margin-top: 15px;
+            padding: 12px 15px;
+            font-size: 14px;
+        }
+    }
+}
+
+.single-product {
+    .woocommerce-message {
+        display: flex;
+        padding: 1.5em 2em 1.5em 3.5em;
+
+        &::before {
+            top: 0;
+            bottom: 0;
+            height: 24px;
+            margin: auto;
+        }
+
+        .button {
+            position: absolute;
+            top: 0;
+            right: 2em;
+            bottom: 0;
+            float: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 36px;
+            margin: auto;
+            padding: 5px 15px;
+            font-weight: 900;
+            font-size: 14px;
+            color: #fff;
+            text-transform: uppercase;
+            background-color: #96302f;
+
+            &:hover {
+                color: #fff;
+                background-color: #000;
+            }
+        }
+
+        @media (max-width: 991px) {
+            padding-right: 10.5em;
+        }
+
+        @media (max-width: 767px) {
+            padding-right: 8.5em;
+            padding-left: 3em;
+            font-size: 14px;
+
+            .button {
+                height: 30px;
+                margin: auto;
+                padding: 5px 10px;
+                font-size: 10px;
+            }
+
+            &::before {
+                left: 1.2em;
+                height: 20px;
+            }
+        }
+    }
+}

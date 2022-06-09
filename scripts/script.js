@@ -204,12 +204,10 @@ var productTabs = () => {
 // product show price depending on the variation
 var productPriceVariation = () => {
     if ($(".variations.size #size option").length > 1) {
-        console.log("true");
         $('.price').eq(1).show();
     }
 
     else {
-        console.log("false");
         $('.price').eq(0).show();
     }
 }
