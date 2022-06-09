@@ -110,15 +110,21 @@
         transition: .3s ease-in-out all;
     }
 
-    .has-default-attributes {
-        .short-description.woocommerce-product-details__short-description + .price {
-            display: none !important;
-        }
-    }
+    // #meatiful_custom_price {
+    //     display: none !important;
+    // }
 
-    #meatiful_custom_price:empty {
-        display: none;
-    }
+    // .has-default-attributes {
+    //     .short-description.woocommerce-product-details__short-description + .price {
+    //         display: none !important;
+    //     }
+
+    //     #meatiful_custom_price {
+    //         display: flex !important;
+    //     }
+    // }
+
+    
 
     .content-description {
         padding-left: 25px;  
@@ -157,7 +163,8 @@
         }
 
         .price {
-            display: flex;
+            // display: flex;
+            display: none;
             margin-top: 30px;
             font-size: 34px;
             font-family: $font-gotham-bold;

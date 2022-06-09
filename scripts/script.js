@@ -201,6 +201,19 @@ var productTabs = () => {
     }  
 }
 
+// product show price depending on the variation
+var productPriceVariation = () => {
+    if ($(".variations.size #size option").length > 1) {
+        console.log("true");
+        $('.price').eq(1).show();
+    }
+
+    else {
+        console.log("false");
+        $('.price').eq(0).show();
+    }
+}
+
 // product custom price function - default
 var productCustomPriceDefault = () => {
     setTimeout(() => {
@@ -380,6 +393,7 @@ window.onload = function() {
     popUp();
     contactForm7();
     productWooCommerce();
+    productPriceVariation();
     // removeDefaultOption();
     productCustomPriceDefault();
     productCustomPriceDropdown();
