@@ -4,14 +4,19 @@
 // This file contains styles that are specific to the default wordpress page.
 // -------------------------------------------------------------------------------------------
 
-.page-default {
-    .content .wrapper {
-        position: relative;
-        top: -70px;
-        padding: 90px;
-        margin-bottom: -70px;
-        background-repeat: repeat-y;
-        background-size: 100%;
+.page-default {    
+    .content {
+        background-image: url(../assets/images/bg-film.jpg);
+
+        .wrapper {
+            position: relative;
+            top: -70px;
+            padding: 90px;
+            margin-bottom: -70px;
+            background-image: url(../assets/images/bg-home-featured.jpg);
+            background-repeat: repeat-y;
+            background-size: 100%;
+        }
     }
 
     .holder {
