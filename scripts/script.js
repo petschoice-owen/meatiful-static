@@ -269,6 +269,15 @@ var productWooCommerce = () => {
     }
 }
 
+// checkout page - order overview - check number of li
+var checkoutOrderLi = () => {
+    if ($(".woocommerce-thankyou-order-details").length) {
+        var liCount = $(".woocommerce-thankyou-order-details li").length
+
+        $(".woocommerce-thankyou-order-details").addClass("woocommerce-thankyou-order-details-list-"+ liCount);
+    }
+}
+
 // pop-up functions
 var popUp = () => {
     if(typeof window.localStorage !== "undefined" && !localStorage.getItem('visited')) {
@@ -378,6 +387,7 @@ $(document).ready(function() {
     productQuantity();
     productTabs();
     contactForm7();
+    checkoutOrderLi();
 });
   
 $(window).resize(function() {
