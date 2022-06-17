@@ -491,6 +491,12 @@
         }
     }
 
+    .woocommerce-checkout-review-order tfoot .woocommerce-shipping-methods li label {
+        @media (max-width: 767px) {
+            font-size: 14px;
+        }
+    }
+
     .woocommerce-shipping-fields {
         margin-bottom: 8px !important;
 
@@ -518,6 +524,7 @@
 
         .wc_payment_methods li * {
             color: $text-color;
+            line-height: 1.5;
         }
 
         .wc_payment_method {
@@ -530,8 +537,13 @@
                 position: relative;
                 top: -1px;
                 padding-left: 10px;
+                line-height: 1.6;
                 font-size: 15px;
                 cursor: pointer;
+
+                @media (max-width: 991px) {
+                    font-size: 14px;
+                }
             } 
         }
     }
