@@ -547,6 +547,28 @@
             } 
         }
     }
+
+    #wc-stripe-cc-form {
+        margin-top: 0 !important;
+
+        .form-row-wide,
+        .form-row-first,
+        .form-row-last {
+            padding: 0 !important;
+            margin-top: 5px !important;
+            margin-bottom: 0 !important;
+
+            label {
+                padding-left: 0 !important;
+                margin-bottom: 0 !important;
+            }
+        }
+
+        .form-row-first,
+        .form-row-last {
+            width: 48%;
+        }
+    }
 }
 
 .woocommerce-order-received .woocommerce-order {
