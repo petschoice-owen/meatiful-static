@@ -16,7 +16,6 @@
     background-position: center top;
     background-size: cover;
     opacity: 1;
-    // transition: .35s ease-in-out all;
   
     .wrapper {
         position: relative;
@@ -267,6 +266,44 @@
             width: 100%;
         }
     }
+
+    .free-delivery {
+        position: fixed;
+        top: 111px;
+        left: 13px;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+        box-shadow: 0 2px 7px 0 rgba(0,0,0,.5);
+
+        &-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px 10px 10px;
+        }
+
+        .icon-truck {
+            width: 25px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        p {
+            font-size: 14px;
+            font-family: $font-gotham-bold;
+            line-height: 1;
+            text-transform: uppercase;
+        }
+        
+        .torn-bottom {
+            display: flex;
+            margin-bottom: -5px;
+            width: 100%;
+        }
+    }
   
     @media (max-width: 1599px) {
         .nav-item,
@@ -373,6 +410,10 @@
             width: 175px;
             margin-bottom: -3px;
         }
+
+        .free-delivery {
+            top: 68px;
+        }
     }
   
     @media (max-width: 991px) {
@@ -408,11 +449,49 @@
                 margin: 0 2px;
             }
         }
+
+        .free-delivery {
+            &-content {
+                padding: 12px 8px 8px;
+            }
+
+            .icon-truck {
+                width: 23px;
+                margin-right: 8px;
+            }
+
+            p {
+                font-size: 12px;
+            }
+
+            .torn-bottom {
+                width: 220px;
+            }
+        }
     }
   
     @media (max-width: 767px) {
         .buy-online {
             display: none;
+        }
+
+        .free-delivery {
+            &-content {
+                padding: 12px 8px 6px;
+            }
+
+            .icon-truck {
+                width: 20px;
+                margin-right: 7px;
+            }
+
+            p {
+                font-size: 10px;
+            }
+
+            .torn-bottom {
+                width: 185px;
+            }
         }
     }
 }
@@ -422,6 +501,10 @@
 
     .buy-online {
         top: 32px;
+    }
+
+    .free-delivery {
+        top: 143px; 
     }
 
     @media (max-width: 1439px) {
@@ -434,13 +517,25 @@
         .buy-online {
             top: 100px;
         }
+
+        .free-delivery {
+            top: 100px; 
+        }
     }
 
     @media (max-width: 767px) {
         top: 46px;
 
+        .free-delivery {
+            top: 114px; 
+        }
+
         &.scrolled {
             top: 0;
+
+            .free-delivery {
+                top: 68px;
+            }
         }
     }
 }
