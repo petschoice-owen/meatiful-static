@@ -244,33 +244,52 @@
             }
         }
 
-        .wc-proceed-to-checkout a {
-            padding: 20px 15px;
+        .wc-proceed-to-checkout {
             font-weight: 900;
-            font-size: 18px;
-            color: #fff;
-            text-transform: uppercase;
-            background-color: #96302f;
-    
-            &:hover {
-                color: #fff;
-                background-color: #000;
-            }
-    
-            @media (max-width: 991px) {
-                padding: 15px 10px;
-                font-size: 16px;
-            }
-    
-            @media (max-width: 767px) {
-                font-size: 16px;
-            }
-    
-            @media (max-width: 575px) {
-                font-size: 13px;
-            }
-        }
+            font-size: 15px;
+            color: #222;
 
+            .devnet_fsl-free-shipping {
+                padding: 15px 25px !important;
+
+                .fsl-title.title {
+                    margin: 0 !important;
+                }
+
+                .fsl-progress-bar {
+                    margin: 10px 0 !important;
+                }
+            }
+
+            a {
+                padding: 20px 15px;
+                margin-top: 15px;
+                font-weight: 900;
+                font-size: 18px;
+                color: #fff;
+                text-transform: uppercase;
+                background-color: #96302f;
+        
+                &:hover {
+                    color: #fff;
+                    background-color: #000;
+                }
+        
+                @media (max-width: 991px) {
+                    padding: 15px 10px;
+                    font-size: 16px;
+                }
+        
+                @media (max-width: 767px) {
+                    font-size: 16px;
+                }
+        
+                @media (max-width: 575px) {
+                    font-size: 13px;
+                }
+            }
+    
+        }
         @media (min-width: 992px) and (max-width: 1199px) {
             width: 50% !important;
         }
@@ -353,6 +372,44 @@
             }
         }
     }
+
+    // .meatiful-shipping-fee {
+    //     padding-top: 10px;
+    //     margin: 0 !important;
+
+    //     .free-shipping,
+    //     .not-free-shipping {
+    //         display: none;
+    //         margin: 0 !important;
+    //     }
+
+    //     .not-free-shipping {
+    //         position: relative;
+    //         padding-left: 35px;
+
+    //         &::before {
+    //             content: "";
+    //             position: absolute;
+    //             top: 12px;
+    //             left: 4px;
+    //             width: 10px;
+    //             height: 4px;
+    //             background-color: #96302f;
+    //             transform: rotate(45deg);
+    //         }
+
+    //         &::after {
+    //             content: "";
+    //             position: absolute;
+    //             top: 10px;
+    //             left: 8px;
+    //             width: 18px;
+    //             height: 4px;
+    //             background-color: #96302f;
+    //             transform: rotate(-45deg);
+    //         }
+    //     }
+    // }
 }
 
 .woocommerce-checkout {
@@ -516,6 +573,23 @@
 
         @media (max-width: 767px) {
             width: 100%;
+        }
+    }
+
+    .woocommerce-checkout-payment .devnet_fsl-free-shipping {
+        padding: 20px 15px !important;
+
+        .fsl-title.title {
+            margin: 0 !important;
+            font-size: 16px !important;
+        }
+
+        .fsl-notice.notice {
+            font-size: 14px !important;
+        }
+
+        .fsl-progress-bar {
+            margin: 10px 0 !important;
         }
     }
 
