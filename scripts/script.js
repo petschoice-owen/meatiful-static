@@ -234,6 +234,23 @@ var productCustomPriceDropdown = () => {
     }, 100);
 }
 
+// product - change product image on size change
+var productImageChange = () => {
+    if ($("form.variations_form").length) {
+        $("form.variations_form select#size").on('change', function() {
+            if ( $("form.variations_form select#size")[0].selectedIndex === 0 ) {
+                var firstImageSrc = $(".woocommerce-product-gallery .thumbnails .thumbnail:nth-child(1) img").attr("src");
+                $(".woocommerce-product-gallery__image:first-child img").attr("src", firstImageSrc);
+            }
+
+            else {
+                var secondImageSrc = $(".woocommerce-product-gallery .thumbnails .thumbnail:nth-child(3) img").attr("src");
+                $(".woocommerce-product-gallery__image:first-child img").attr("src", secondImageSrc);
+            }
+        });
+    }
+}
+
 // product option remove option - "Choose an option"
 var removeDefaultOption = () => {
     if ($(".variations_form.cart #size option").length) {
@@ -424,5 +441,6 @@ window.onload = function() {
     productCustomPriceDefault();
     productCustomPriceDropdown();
     productForm();
+    productImageChange();
 }
   
