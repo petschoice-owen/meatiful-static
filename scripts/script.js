@@ -77,7 +77,6 @@ var parallaxMargin = () => {
 
             else {
                 $(".page-home").css("margin-top", autoHeight+"px");
-                console.log("else");
             }
         }
 
@@ -377,6 +376,24 @@ var stockists = () => {
         });
     }
 }
+
+// top navigation - telephone number add "tel:"
+var topNavTelephone = () => {
+    if ($(".buy-online-content .phone-number").length) {
+        var phoneNumber = $(".buy-online-content .phone-number").attr("href");
+        var formatNumber = phoneNumber.replace(/\s+/g,"");
+
+        $(".buy-online-content .phone-number").attr("href", formatNumber);
+    }
+
+    if ($(".social-mobile .phone-number").length) {
+        var phoneNumber = $(".social-mobile .phone-number").attr("href");
+        var formatNumber = phoneNumber.replace(/\s+/g,"");
+
+        $(".social-mobile .phone-number").attr("href", formatNumber);
+    }
+}
+
   
 // initialize the functions
 windowScrolled();
@@ -388,6 +405,7 @@ $(document).ready(function() {
     productTabs();
     contactForm7();
     checkoutOrderLi();
+    topNavTelephone();
 });
   
 $(window).resize(function() {
@@ -398,7 +416,7 @@ $(window).resize(function() {
 window.onload = function() {
     masonry();
     stockists();
-    popUp();
+    // popUp();
     contactForm7();
     productWooCommerce();
     productPriceVariation();
