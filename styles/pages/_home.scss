@@ -13,16 +13,6 @@
         right: 0;
         left: 0;
         margin-top: 0;
-        padding: 155px 0 110px;
-    
-        .custom-slider-wrapper {
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 1;
-            width: 100%;
-            height: 100%;
-        }
     
         .custom-slider {
             width: 100%;
@@ -35,14 +25,32 @@
     
         .slick-list,
         .slick-track,
-        .slide-item {
+        .slide-item,
+        .slide-item-background {
             height: 100%;
         }
     
         .slide-item {
+            position: relative;
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
+        }
+
+        .slide-item-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            pointer-events: none;
+        }
+
+        .slider-padding {
+            padding-top: 155px;
+            padding-bottom: 110px;
         }
     
         .hero-background {
@@ -154,25 +162,6 @@
         padding: 0 0 80px;
     }
   
-    // .product-range {
-    //     position: relative;
-    //     padding-bottom: 80px;
-    //     color: #fff;
-    //     background-color: #000;
-    
-    //     .items {
-    //         display: flex;
-    //         justify-content: center;
-    //         margin: auto;
-    //         width: 1030px;
-    //     }
-    
-    //     .btn-brown {
-    //         margin: 0 15px;
-    //         width: 33.33%;
-    //     }
-    // }
-  
     .news {
         position: relative;
         padding: 80px 0;
@@ -254,8 +243,9 @@
     }
   
     @media (max-width: 1439px) {
-        .hero-parallax {
-            padding: 160px 0 125px;
+        .hero-parallax .slider-padding {
+            padding-top: 160px;
+            padding-bottom: 125px;
         }
     
         .featured {
@@ -266,7 +256,11 @@
     @media (max-width: 1199px) {
         .hero-parallax {
             top: 68px;
-            padding: 120px 0 80px;
+            
+            .slider-padding {
+                padding-top: 120px;
+                padding-bottom: 80px;
+            }
         }
     
         .featured {
@@ -287,7 +281,11 @@
     @media (max-width: 991px) {
         .hero-parallax {
             top: 67px;
-            padding: 80px 0 70px;
+            
+            .slider-padding {
+                padding-top: 80px;
+                padding-bottom: 70px;
+            }
         }
     
         .featured {
@@ -329,7 +327,7 @@
   
     @media (max-width: 767px) {
         .hero-parallax {
-            .custom-slider-wrapper {
+            .slide-item-background {
                 display: none;
             }
     
