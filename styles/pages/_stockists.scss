@@ -634,6 +634,12 @@
 
             .wpsl-dropdown {
                 width: auto;
+
+                &:focus-visible,
+                &:focus-within,
+                &:focus {
+                    outline: none;
+                }
             }
 
             #wpsl-results {
@@ -663,6 +669,106 @@
                 color: #fff;
                 background: #96302f;
                 border-radius: 5px;
+            }
+        }
+    }
+
+    #wpsl-result-list {
+        .wpsl-no-results-msg,
+        .wpsl-preloader {
+            font-size: 16px;
+        }
+
+        .wpsl-store-location {
+            margin-bottom: 0;
+
+            & > p {
+                span {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        li:not(.wpsl-no-results-msg) {
+            background-color: transparent;
+            color: #343434;
+            transition: .35s ease-in-out all;
+
+            p {
+                display: flex;
+                flex-wrap: wrap;
+                margin-bottom: 0;
+                font-size: 14px;
+                line-height: 1.4;
+                transition: .35s ease-in-out all;
+
+                strong {
+                    width: 100%;
+                    margin-bottom: 5px;
+                    font-size: 18px;
+                    line-height: 1.2;
+                }
+            }
+
+            &:hover {
+                color: #fff;
+                background-color: #96302f;
+
+                p,
+                a {
+                    color: #fff;
+                }
+
+                a:hover {
+                    color: #101010;
+
+                    &::before {
+                        color: #fff;
+                        transition: .35s ease-in-out all;
+                    }
+                }
+            }
+        }
+
+        .wpsl-preloader:hover {
+            background-color: transparent !important;
+            color: #343434 !important;
+
+            div, p, li {
+                color: #343434 !important;
+            }
+        }
+
+        a {
+            font-family: $font-gotham-medium;
+            text-decoration: underline;
+            color: #343434;
+            transition: .35s ease-in-out all;
+        }
+
+        .wpsl-contact-details strong {
+            margin-bottom: 0 !important;
+            font-family: $font-gotham-book !important;
+            font-size: 14px !important;
+            line-height: 1.4 !important;
+        }
+
+        .wpsl-direction-wrap {
+            display: flex;
+            font-size: 14px;
+            line-height: 1.4;
+
+            a {
+                position: relative;
+                margin-left: 15px;
+
+                &::before {
+                    content: "-";
+                    position: absolute;
+                    top: 0;
+                    left: -10px;
+                    font-family: $font-gotham-book;
+                }
             }
         }
     }
@@ -714,7 +820,6 @@
             }
         }
     }
-
 
     @media (max-width: 991px) {
         #wpsl-search-wrap {
@@ -771,6 +876,25 @@
         #wpsl-search-wrap .wpsl-search-btn-wrap #wpsl-search-btn {
             top: 2px;
             padding: 9.5px 30px;
+        }
+    }
+
+    @media (max-width: 675px) {
+        .content .holder {
+            padding: 15px;
+        }
+
+        #wpsl-wrap #wpsl-result-list li {
+            padding: 10px;
+        }
+
+        #wpsl-search-wrap .wpsl-select-wrap .wpsl-dropdown {
+            height: 40px;
+            padding: 5px 8px;
+        }
+
+        #wpsl-stores {
+            height: 300px !important;
         }
     }
 
