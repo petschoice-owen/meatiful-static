@@ -62,6 +62,7 @@
             align-items: center;
             height: 240px;
             padding: 15px;
+            margin-bottom: 10px;
 
             &:hover img {
                 transform: scale(1);
@@ -76,14 +77,16 @@
         }
 
         .description {
-            margin: 10px 0 30px;
+            // margin: 10px 0 30px;
+            padding: 10px 0 30px;
+            margin: auto 0 0;
             font-weight: 700;
         }
 
         .button-holder {
             display: flex;
             justify-content: center;
-            margin-top: auto;
+            margin-top: 0;
     
             .btn-brown {
                 padding: 20px 40px;
@@ -156,7 +159,11 @@
                 height: 160px;
             }
 
-            .button-holder {        
+            .description {
+                padding-bottom: 25px;
+            }
+
+            .button-holder {
                 .btn-brown {
                     padding: 18px 35px;
                 }
@@ -178,6 +185,10 @@
 
             .thumbnail {
                 height: 200px;
+            }
+
+            .description {
+                padding-bottom: 20px;
             }
         }
 
