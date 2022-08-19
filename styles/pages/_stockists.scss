@@ -685,6 +685,7 @@
             & > p {
                 span {
                     margin-bottom: 0;
+                    padding-right: 5px;
                 }
             }
         }
@@ -692,7 +693,7 @@
         li:not(.wpsl-no-results-msg) {
             background-color: transparent;
             color: #343434;
-            transition: .35s ease-in-out all;
+            // transition: .35s ease-in-out all;
 
             p {
                 display: flex;
@@ -715,7 +716,8 @@
                 background-color: #96302f;
 
                 p,
-                a {
+                a,
+                .wpsl-direction-wrap {
                     color: #fff;
                 }
 
@@ -754,21 +756,27 @@
         }
 
         .wpsl-direction-wrap {
+            position: relative;
             display: flex;
+            width: fit-content;
             font-size: 14px;
             line-height: 1.4;
+            color: #343434;
+            transition: .35s ease-in-out all;
+
+            &::after {
+                content: "-";
+                position: absolute;
+                top: 0;
+                right: -10px;
+                font-family: $font-helveticaneue;
+            }
 
             a {
-                position: relative;
+                position: absolute;
+                left: 100%;
+                display: flex;
                 margin-left: 15px;
-
-                &::before {
-                    content: "-";
-                    position: absolute;
-                    top: 0;
-                    left: -10px;
-                    font-family: $font-gotham-book;
-                }
             }
         }
     }
